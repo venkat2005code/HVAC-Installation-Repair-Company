@@ -1,0 +1,62 @@
+/* EMERGENCY */
+.emergency-hero {
+  background: linear-gradient(135deg, #150505 0%, #2a0808 50%, #150505 100%);
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(239,68,68,0.2);
+  position: relative; overflow: hidden;
+}
+.emergency-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(239,68,68,0.12), transparent 70%);
+}
+.emergency-hero .container { position: relative; z-index: 1; }
+.emergency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(239,68,68,0.10);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f87171;
+  margin-bottom: 1.5rem;
+  animation: pulse-emergency 2s ease infinite;
+}
+@keyframes pulse-emergency {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
+}
+.emergency-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(239,68,68,0.08);
+  border: 1.5px solid rgba(239,68,68,0.3);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 2rem;
+  margin: 1.5rem 0 2rem;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+.emergency-phone:hover { background: rgba(239,68,68,0.16); border-color: rgba(239,68,68,0.6); transform: translateY(-2px); }
+.ep-icon { font-size: 2rem; animation: ring 2.5s ease infinite; }
+@keyframes ring { 0%, 100% { transform: rotate(0); } 5% { transform: rotate(15deg); } 10% { transform: rotate(-15deg); } 15% { transform: rotate(10deg); } 20% { transform: rotate(0); } }
+.ep-text .ep-label { font-family: var(--font-label); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #f87171; display: block; }
+.ep-text .ep-number { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+.emergency-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.emergency-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(239,68,68,0.15); border-radius: var(--radius-lg); padding: 2rem 1.5rem; text-align: center; transition: all var(--dur-mid) var(--ease); }
+.emergency-card:hover { border-color: rgba(239,68,68,0.4); background: rgba(239,68,68,0.05); }
+.ec-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.emergency-card h3 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.emergency-card p { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+.emergency-form-section { background: var(--bg-primary); }
+

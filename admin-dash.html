@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/jpeg" href="img_logo.jpg"/>
+<title>Admin ERP — AirPro HVAC</title>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" id="page-css" href="css/dashboard.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner" style="max-width: 100%">
+    <a href="index.html" class="logo" style="text-decoration:none">
+      <img src="img_logo.jpg" alt="AirPro Logo"/>
+      <div class="logo-text">
+        <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+        <span class="logo-tagline" style="color:var(--brand-orange)">ERP SYSTEM</span>
+      </div>
+    </a>
+
+    <div class="header-right" style="display:flex;align-items:center;gap:0.75rem">
+      <button class="header-btn" id="dirToggle" onclick="toggleDir()">LTR</button>
+      <button class="header-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle Theme">
+        <span id="themeIcon"><i data-lucide="moon"></i></span>
+      </button>
+      <div class="header-divider"></div>
+      <svg class="header-avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="20" cy="20" r="20" fill="#FFF3ED"/>
+  <circle cx="20" cy="15" r="6" fill="#E85D04"/>
+  <path d="M10 32C10 27.5817 14.4772 24 20 24C25.5228 24 30 27.5817 30 32" stroke="#E85D04" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 12L31 9M31 12L28 9" stroke="#E85D04" stroke-width="2" stroke-linecap="round"/>
+</svg>
+    </div>
+  </div>
+</header>
+<!-- DASHBOARD CONTAINER -->
+<div class="dash-container">
+  
+    <!-- SIDEBAR -->
+  <aside class="sidebar" id="dashSidebar">
+    
+    <nav class="sidebar-nav" id="scrollspy-nav">
+      <a href="#overview" class="sidebar-link active">Operations Overview</a>
+      <a href="#customers" class="sidebar-link">Customers</a>
+      <a href="#equipment" class="sidebar-link">Equipment Database</a>
+      <a href="#requests" class="sidebar-link">Service Requests</a>
+      <a href="#scheduling" class="sidebar-link">Technician Scheduling</a>
+      <a href="#contracts" class="sidebar-link">Maintenance Contracts</a>
+      <a href="#warranty" class="sidebar-link">Warranty Management</a>
+      <a href="#reports" class="sidebar-link">Visit Reports</a>
+      <a href="#invoices" class="sidebar-link">Payments & Invoices</a>
+      <a href="#analytics" class="sidebar-link">Analytics</a>
+      <a href="#notifications" class="sidebar-link">Notifications</a>
+      <a href="#settings" class="sidebar-link">System Settings</a>
+    </nav>
+    
+    <a href="login.html" class="sidebar-logout">
+      <i data-lucide="log-out"></i> Logout
+    </a>
+  </aside>
+
+  <!-- MAIN LONG-SCROLL CONTENT -->
+  <main class="dash-main">
+    
+    <!-- 1. OPERATIONS OVERVIEW -->
+    <section id="overview" class="dash-section" style="padding-top: 0">
+      <div class="section-header">
+        <h2>Operations Overview</h2>
+        <p>Real-time HVAC business metrics and daily performance.</p>
+      </div>
+      
+      <div class="admin-stats-grid">
+        <div class="hvac-card">
+          <div style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Total Customers</div>
+          <div style="font-size:2rem;font-weight:800;color:var(--text-primary)">15,402</div>
+          <div style="font-size:0.8rem;color:#22c55e;margin-top:0.5rem"><i data-lucide="trending-up" style="width:12px"></i> +12 this week</div>
+        </div>
+        <div class="hvac-card">
+          <div style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Active Contracts</div>
+          <div style="font-size:2rem;font-weight:800;color:var(--text-primary)">8,920</div>
+          <div style="font-size:0.8rem;color:var(--brand-orange);margin-top:0.5rem">42 Expiring soon</div>
+        </div>
+        <div class="hvac-card">
+          <div style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Today's Visits</div>
+          <div style="font-size:2rem;font-weight:800;color:var(--text-primary)">34</div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.5rem">12 Techs active</div>
+        </div>
+        <div class="hvac-card">
+          <div style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Open Repairs</div>
+          <div style="font-size:2rem;font-weight:800;color:#ef4444">18</div>
+          <div style="font-size:0.8rem;color:#ef4444;margin-top:0.5rem">3 Emergencies (24/7)</div>
+        </div>
+        <div class="hvac-card" style="background:var(--brand-navy);border-color:var(--brand-orange)">
+          <div style="color:var(--brand-orange);font-size:0.8rem;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">MTD Revenue</div>
+          <div style="font-size:2rem;font-weight:800;color:#fff">$248.5K</div>
+          <div style="font-size:0.8rem;color:#22c55e;margin-top:0.5rem"><i data-lucide="trending-up" style="width:12px"></i> +8% vs last month</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CUSTOMER MANAGEMENT -->
+    <section id="customers" class="dash-section">
+      <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end">
+        <div>
+          <h2>Customer Directory</h2>
+          <p>Search profiles, addresses, and billing history.</p>
+        </div>
+        <div style="display:flex;gap:1rem">
+          <input type="text" placeholder="Search customers..." style="padding:0.75rem 1rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:20px;color:var(--text-primary)"/>
+        </div>
+      </div>
+      
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Systems</th>
+              <th>Contract</th>
+              <th>Balance</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="font-weight:700;color:var(--text-primary)">Sarah Baxter</div><div style="font-size:0.8rem;color:var(--text-muted)">sarah.b@example.com</div></td>
+              <td>1245 Maplewood Dr, Springfield</td>
+              <td>2 (AC, Furnace)</td>
+              <td><span style="background:rgba(232,93,4,0.1);color:var(--brand-orange);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem;font-weight:700">Premium</span></td>
+              <td>$0.00</td>
+              <td><button class="btn btn-outline" style="padding:0.25rem 0.75rem;font-size:0.8rem">View</button></td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:700;color:var(--text-primary)">Michael Chen</div><div style="font-size:0.8rem;color:var(--text-muted)">mchen82@example.com</div></td>
+              <td>88 Oak Lane, Springfield</td>
+              <td>1 (Heat Pump)</td>
+              <td><span style="background:rgba(255,255,255,0.1);color:var(--text-secondary);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">None</span></td>
+              <td style="color:#ef4444;font-weight:700">$450.00</td>
+              <td><button class="btn btn-outline" style="padding:0.25rem 0.75rem;font-size:0.8rem">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. HVAC EQUIPMENT MANAGEMENT -->
+    <section id="equipment" class="dash-section">
+      <div class="section-header">
+        <h2>HVAC Equipment Database</h2>
+        <p>Master registry of all installed systems across all properties.</p>
+      </div>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>System Type</th>
+              <th>Brand / Model</th>
+              <th>Serial No.</th>
+              <th>Location</th>
+              <th>Owner</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="font-weight:700;color:var(--text-primary)">Central AC</div></td>
+              <td>Carrier Infinity 24VNA6</td>
+              <td><span style="font-family:monospace;color:var(--text-muted)">CR-99824X</span></td>
+              <td>Backyard</td>
+              <td>Sarah Baxter</td>
+              <td><span style="color:#22c55e"><i data-lucide="check-circle" style="width:14px"></i> Optimal</span></td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:700;color:var(--text-primary)">Gas Furnace</div></td>
+              <td>Trane XV95 TUH2B080</td>
+              <td><span style="font-family:monospace;color:var(--text-muted)">TR-10294Z</span></td>
+              <td>Basement</td>
+              <td>Sarah Baxter</td>
+              <td><span style="color:#f59e0b"><i data-lucide="alert-triangle" style="width:14px"></i> Warning</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. SERVICE REQUEST KANBAN -->
+    <section id="requests" class="dash-section">
+      <div class="section-header">
+        <h2>Service Requests Workflow</h2>
+        <p>Manage incoming requests, scheduling, and job execution.</p>
+      </div>
+      
+      <div class="kanban-board">
+        <!-- Column 1 -->
+        <div class="kanban-column">
+          <div class="kanban-header">
+            New Requests <span class="kanban-count">2</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card priority-high">
+              <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem">
+                <span style="font-size:0.75rem;font-weight:700;color:#ef4444;background:rgba(239,68,68,0.1);padding:0.1rem 0.4rem;border-radius:4px">EMERGENCY</span>
+                <span style="font-size:0.75rem;color:var(--text-muted)">Just now</span>
+              </div>
+              <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">AC completely dead</h4>
+              <p style="margin:0;font-size:0.8rem;color:var(--text-secondary)">Robert Smith • 12 Pine St.</p>
+            </div>
+            <div class="kanban-card priority-low">
+              <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem">
+                <span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);background:rgba(255,255,255,0.1);padding:0.1rem 0.4rem;border-radius:4px">ROUTINE</span>
+                <span style="font-size:0.75rem;color:var(--text-muted)">2h ago</span>
+              </div>
+              <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Fall Tune-Up Request</h4>
+              <p style="margin:0;font-size:0.8rem;color:var(--text-secondary)">Lisa Wong • 84 West Ave.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="kanban-column">
+          <div class="kanban-header">
+            Scheduled <span class="kanban-count">1</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card priority-med">
+              <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem">
+                <span style="font-size:0.75rem;font-weight:700;color:#f59e0b;background:rgba(245,158,11,0.1);padding:0.1rem 0.4rem;border-radius:4px">REPAIR</span>
+                <span style="font-size:0.75rem;color:var(--text-muted)">Oct 14</span>
+              </div>
+              <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Furnace Noise (Blower)</h4>
+              <p style="margin:0 0 0.5rem 0;font-size:0.8rem;color:var(--text-secondary)">Sarah Baxter • 1245 Maplewood</p>
+              <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--text-primary)">
+                <img src="img_team_david.jpg" style="width:20px;height:20px;border-radius:50%;border:1px solid var(--brand-orange)"/> David S. assigned
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="kanban-column">
+          <div class="kanban-header">
+            In-Progress <span class="kanban-count">0</span>
+          </div>
+          <div class="kanban-body">
+            <!-- Empty state -->
+            <div style="text-align:center;padding:2rem;color:var(--text-muted);font-size:0.85rem">Drop jobs here when dispatched</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TECHNICIAN SCHEDULING -->
+    <section id="scheduling" class="dash-section">
+      <div class="section-header">
+        <h2>Technician Scheduling & Dispatch</h2>
+        <p>Monitor field staff locations, route efficiency, and daily workload.</p>
+      </div>
+      <div class="grid-3">
+        <div class="hvac-card" style="border-top:4px solid var(--brand-orange)">
+          <div class="tech-profile" style="border:none;padding:0;margin-bottom:1rem;background:transparent">
+            <img src="img_team_david.jpg" alt="David"/>
+            <div class="tech-info">
+              <h4>David S.</h4>
+              <p>Lead Tech • Route A</p>
+              <div style="font-size:0.75rem;color:#22c55e;margin-top:0.25rem">● On Site</div>
+            </div>
+          </div>
+          <div style="background:var(--bg-primary);border-radius:8px;padding:1rem;border:1px solid var(--border)">
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.25rem">Current Job (10:00 - 12:00)</div>
+            <div style="font-weight:700;color:var(--text-primary)">Compressor Replacement</div>
+            <div style="font-size:0.85rem;color:var(--text-secondary)">188 High St.</div>
+          </div>
+          <button class="btn btn-outline" style="width:100%;margin-top:1rem;font-size:0.8rem">Message Tech</button>
+        </div>
+
+        <div class="hvac-card" style="border-top:4px solid #3b82f6">
+          <div class="tech-profile" style="border:none;padding:0;margin-bottom:1rem;background:transparent">
+            <img src="img_team_elena.jpg" alt="Elena"/>
+            <div class="tech-info">
+              <h4>Elena M.</h4>
+              <p>HVAC Specialist • Route B</p>
+              <div style="font-size:0.75rem;color:#f59e0b;margin-top:0.25rem">● Traveling</div>
+            </div>
+          </div>
+          <div style="background:var(--bg-primary);border-radius:8px;padding:1rem;border:1px solid var(--border)">
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.25rem">Next Job (11:30 - 12:30)</div>
+            <div style="font-weight:700;color:var(--text-primary)">Annual Tune-Up</div>
+            <div style="font-size:0.85rem;color:var(--text-secondary)">44 Lakeview Dr.</div>
+          </div>
+          <button class="btn btn-outline" style="width:100%;margin-top:1rem;font-size:0.8rem">Message Tech</button>
+        </div>
+
+        <div class="hvac-card" style="border-top:4px solid #9ca3af">
+          <div class="tech-profile" style="border:none;padding:0;margin-bottom:1rem;background:transparent">
+            <img src="img_team_james.jpg" alt="James"/>
+            <div class="tech-info">
+              <h4>James K.</h4>
+              <p>Maintenance • Off Duty</p>
+              <div style="font-size:0.75rem;color:#9ca3af;margin-top:0.25rem">○ Clocked Out</div>
+            </div>
+          </div>
+          <div style="background:var(--bg-primary);border-radius:8px;padding:1rem;border:1px solid var(--border);opacity:0.5">
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.25rem">Next Shift</div>
+            <div style="font-weight:700;color:var(--text-primary)">Tomorrow, 8:00 AM</div>
+          </div>
+          <button class="btn btn-outline" style="width:100%;margin-top:1rem;font-size:0.8rem" disabled>Message Tech</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MAINTENANCE CONTRACTS -->
+    <section id="contracts" class="dash-section">
+      <div class="section-header">
+        <h2>Maintenance Contracts</h2>
+        <p>Monitor active agreements, track seasonal visit fulfillment, and manage renewals.</p>
+      </div>
+      <div class="grid-3">
+        <div class="hvac-card" style="background:var(--bg-primary)">
+          <div style="font-size:3rem;font-weight:800;color:var(--brand-orange)">8,920</div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.5rem">Active Contracts</div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">Generating $182K recurring monthly revenue.</p>
+        </div>
+        <div class="hvac-card" style="background:var(--bg-primary);border-color:#f59e0b">
+          <div style="font-size:3rem;font-weight:800;color:#f59e0b">42</div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.5rem">Expiring this Month</div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">Action required: Send renewal emails.</p>
+          <button class="btn btn-outline" style="margin-top:1rem;font-size:0.8rem">Send Bulk Reminder</button>
+        </div>
+        <div class="hvac-card" style="background:var(--bg-primary);border-color:#3b82f6">
+          <div style="font-size:3rem;font-weight:800;color:#3b82f6">1,402</div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.5rem">Pending Fall Tune-Ups</div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">Customers who haven't scheduled their Q4 visit.</p>
+          <button class="btn btn-outline" style="margin-top:1rem;font-size:0.8rem">Campaign Builder</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 7. WARRANTY MANAGEMENT -->
+    <section id="warranty" class="dash-section">
+      <div class="section-header">
+        <h2>Warranty Management</h2>
+        <p>Track equipment warranties, file claims, and monitor expiration dates.</p>
+      </div>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>System Serial</th>
+              <th>Coverage Type</th>
+              <th>Provider</th>
+              <th>Expiration Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sarah Baxter</td>
+              <td><span style="font-family:monospace;color:var(--text-muted)">CR-99824X</span></td>
+              <td>10-Year Parts & Compressor</td>
+              <td>Carrier</td>
+              <td>Aug 15, 2032</td>
+              <td><span style="background:rgba(34,197,94,0.1);color:#22c55e;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">Active</span></td>
+            </tr>
+            <tr>
+              <td>Michael Chen</td>
+              <td><span style="font-family:monospace;color:var(--text-muted)">TR-55112P</span></td>
+              <td>5-Year Parts</td>
+              <td>Trane</td>
+              <td>Oct 20, 2026</td>
+              <td><span style="background:rgba(245,158,11,0.1);color:#f59e0b;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">Expiring Soon</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 8. VISIT REPORTS -->
+    <section id="reports" class="dash-section">
+      <div class="section-header">
+        <h2>Service & Technician Reports</h2>
+        <p>Review completed service tickets, parts used, and tech notes before invoicing.</p>
+      </div>
+      <div class="hvac-card" style="margin-bottom:1rem">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+              <span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);background:rgba(255,255,255,0.1);padding:0.1rem 0.4rem;border-radius:4px">COMPLETED</span>
+              <span style="font-size:0.8rem;color:var(--text-secondary)">Job #8819 • Today, 10:45 AM</span>
+            </div>
+            <h3 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Condenser Fan Replacement</h3>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary)">Tech: David S. • Customer: Lisa Wong</p>
+          </div>
+          <button class="btn btn-outline" style="font-size:0.8rem">Approve & Invoice</button>
+        </div>
+        <div style="background:var(--bg-primary);border-radius:8px;padding:1rem;margin-top:1rem;border:1px solid var(--border)">
+          <p style="margin:0 0 0.5rem 0;color:var(--text-primary);font-size:0.9rem"><strong>Tech Notes:</strong> Arrived on site, found condenser fan motor seized. Replaced motor and capacitor. Tested system, cooling restored. Recommended duct cleaning.</p>
+          <p style="margin:0;color:var(--text-primary);font-size:0.9rem"><strong>Parts Used:</strong> 1x OEM Carrier Fan Motor (PN-882), 1x 45/5mfd Capacitor</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. INVOICES -->
+    <section id="invoices" class="dash-section">
+      <div class="section-header">
+        <h2>Invoices & Payments</h2>
+        <p>Manage accounts receivable, generate billing, and track payments.</p>
+      </div>
+      <div class="grid-4" style="margin-bottom:1.5rem">
+        <div class="hvac-card" style="padding:1rem;background:var(--bg-primary)">
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:700">Total Unpaid</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#ef4444">$14,250</div>
+        </div>
+        <div class="hvac-card" style="padding:1rem;background:var(--bg-primary)">
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:700">Collected (30d)</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#22c55e">$248,500</div>
+        </div>
+      </div>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Invoice #</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="font-weight:700;color:var(--text-primary)">INV-49285</div></td>
+              <td>Lisa Wong</td>
+              <td>Oct 14, 2026</td>
+              <td>$485.00</td>
+              <td><span style="background:rgba(239,68,68,0.1);color:#ef4444;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">Unpaid</span></td>
+              <td><a href="#" style="color:var(--brand-orange);font-size:0.8rem;text-decoration:none;font-weight:600">Send Reminder</a></td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:700;color:var(--text-primary)">INV-49284</div></td>
+              <td>Robert Smith</td>
+              <td>Oct 13, 2026</td>
+              <td>$125.00</td>
+              <td><span style="background:rgba(34,197,94,0.1);color:#22c55e;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">Paid</span></td>
+              <td><a href="#" style="color:var(--text-muted);font-size:0.8rem;text-decoration:none;font-weight:600">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10. ANALYTICS -->
+    <section id="analytics" class="dash-section">
+      <div class="section-header">
+        <h2>Reports & Analytics</h2>
+        <p>Deep insights into service volume, tech performance, and revenue trends.</p>
+      </div>
+      <div class="grid-2">
+        <div class="hvac-card" style="background:var(--bg-primary);">
+          <h3 style="margin-bottom:1.5rem;font-size:1.1rem">Monthly Revenue (2026)</h3>
+          <canvas id="revenueChart" style="max-height: 250px;"></canvas>
+        </div>
+        <div class="hvac-card" style="background:var(--bg-primary);display:flex;flex-direction:column;">
+          <h3 style="margin-bottom:1.5rem;font-size:1.1rem;align-self:flex-start">Service Breakdown</h3>
+          <canvas id="repairChart" style="max-height: 250px;"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. NOTIFICATIONS -->
+    <section id="notifications" class="dash-section">
+      <div class="section-header">
+        <h2>Notifications & Communication</h2>
+        <p>Dispatch alerts, SMS reminders, and bulk email campaigns.</p>
+      </div>
+      <div class="hvac-card" style="border-left: 4px solid #3b82f6;margin-bottom:1rem">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+              <div style="width:32px;height:32px;border-radius:50%;background:rgba(59,130,246,0.1);color:#3b82f6;display:flex;align-items:center;justify-content:center"><i data-lucide="message-square"></i></div>
+              <div style="font-weight:700;color:var(--text-primary)">Automated SMS: Tech En Route</div>
+            </div>
+            <p style="margin:0;color:var(--text-secondary);font-size:0.95rem;line-height:1.5">Sent to Lisa Wong: "Your AirPro technician, David S., is on the way and should arrive in 15 minutes."</p>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-muted)">10:20 AM</span>
+        </div>
+      </div>
+      <div class="hvac-card" style="border-left: 4px solid var(--brand-orange)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+              <div style="width:32px;height:32px;border-radius:50%;background:rgba(232,93,4,0.1);color:var(--brand-orange);display:flex;align-items:center;justify-content:center"><i data-lucide="mail"></i></div>
+              <div style="font-weight:700;color:var(--text-primary)">Campaign: Fall Tune-Up Reminder</div>
+            </div>
+            <p style="margin:0;color:var(--text-secondary);font-size:0.95rem;line-height:1.5">Queued to send to 1,402 Premium Contract customers missing their Q4 visit.</p>
+          </div>
+          <button class="btn btn-outline" style="font-size:0.8rem">Manage</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. SETTINGS -->
+    <section id="settings" class="dash-section" style="margin-bottom: 2rem; border-bottom: none">
+      <div class="section-header">
+        <h2>Staff & System Settings</h2>
+        <p>Manage system preferences, pricing tiers, and technician permissions.</p>
+      </div>
+      <div class="grid-3">
+        <div class="hvac-card" style="text-align:center;padding:2rem">
+          <i data-lucide="users" style="width:48px;height:48px;color:var(--brand-orange);margin:0 auto 1rem auto"></i>
+          <h3 style="margin:0 0 0.5rem 0;color:var(--text-primary)">Staff Directory</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-muted)">Manage 24 active employee accounts.</p>
+          <button class="btn btn-outline" style="width:100%;margin-top:1.5rem;font-size:0.8rem">Manage Staff</button>
+        </div>
+        <div class="hvac-card" style="text-align:center;padding:2rem">
+          <i data-lucide="dollar-sign" style="width:48px;height:48px;color:var(--brand-orange);margin:0 auto 1rem auto"></i>
+          <h3 style="margin:0 0 0.5rem 0;color:var(--text-primary)">Pricing & Taxes</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-muted)">Configure service fees and tax rates.</p>
+          <button class="btn btn-outline" style="width:100%;margin-top:1.5rem;font-size:0.8rem">Edit Pricing</button>
+        </div>
+        <div class="hvac-card" style="text-align:center;padding:2rem">
+          <i data-lucide="shield" style="width:48px;height:48px;color:var(--brand-orange);margin:0 auto 1rem auto"></i>
+          <h3 style="margin:0 0 0.5rem 0;color:var(--text-primary)">Security</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-muted)">2FA and session management.</p>
+          <button class="btn btn-outline" style="width:100%;margin-top:1.5rem;font-size:0.8rem">Security Settings</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<button class="mobile-sidebar-toggle" onclick="toggleSidebar()"><i data-lucide="menu"></i></button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+
+  // ScrollSpy Logic
+  const sections = document.querySelectorAll('.dash-section');
+  const navLinks = document.querySelectorAll('.sidebar-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= (sectionTop - 250)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+
+  // Direction Toggle Logic
+  function toggleDir() {
+    const htmlElement = document.documentElement;
+    const dirBtn = document.getElementById('dirToggle');
+    if (htmlElement.getAttribute('dir') === 'rtl') {
+      htmlElement.setAttribute('dir', 'ltr');
+      dirBtn.innerText = 'LTR';
+    } else {
+      htmlElement.setAttribute('dir', 'rtl');
+      dirBtn.innerText = 'RTL';
+    }
+  }
+
+// Theme Toggle Logic
+  function toggleTheme() {
+    const htmlElement = document.documentElement;
+    const themeIcon = document.getElementById('themeIcon');
+    if (htmlElement.getAttribute('data-theme') === 'light') {
+      htmlElement.setAttribute('data-theme', 'dark');
+      themeIcon.innerHTML = '<i data-lucide="sun"></i>';
+    } else {
+      htmlElement.setAttribute('data-theme', 'light');
+      themeIcon.innerHTML = '<i data-lucide="moon"></i>';
+    }
+    lucide.createIcons();
+  }
+
+  // Mobile Sidebar Toggle
+  function toggleSidebar() {
+    document.getElementById('dashSidebar').classList.toggle('open');
+  }
+
+  // Initialize Charts
+  document.addEventListener("DOMContentLoaded", () => {
+    if(typeof Chart === 'undefined') return;
+    
+    Chart.defaults.color = '#94a3b8';
+    Chart.defaults.font.family = '"Inter", sans-serif';
+    
+    // Revenue Line Chart
+    new Chart(document.getElementById('revenueChart'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Revenue ($)',
+          data: [42000, 48000, 39000, 51000, 68000, 85000, 94000, 88000, 62000, 54000, 61000, 72000],
+          borderColor: '#e85d04',
+          backgroundColor: 'rgba(232, 93, 4, 0.1)',
+          tension: 0.4,
+          fill: true,
+          pointBackgroundColor: '#e85d04'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+
+    // Repair Categories Doughnut Chart
+    new Chart(document.getElementById('repairChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['AC Repair', 'Heating Repair', 'Maintenance', 'New Installs'],
+        datasets: [{
+          data: [45, 25, 20, 10],
+          backgroundColor: ['#e85d04', '#3b82f6', '#10b981', '#6366f1'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '75%',
+        plugins: {
+          legend: { position: 'right' }
+        }
+      }
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

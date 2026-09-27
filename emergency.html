@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/jpeg" href="img_logo.jpg"/>
+<title>AirPro HVAC — Premium Installation & Repair Services</title>
+<meta name="description" content="AirPro HVAC offers professional installation, repair, and maintenance for all heating and cooling systems. 24/7 emergency service. Trusted by 15,000+ homeowners."/>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" id="page-css" href="css/emergency.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SITE HEADER
+════════════════════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="index.html" class="logo" id="logoBtn" style="text-decoration:none">
+      <img src="img_logo.jpg" alt="AirPro HVAC Logo"/>
+      <div class="logo-text">
+        <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+        
+      </div>
+    </a>
+
+    <!-- Nav Menu -->
+    <nav class="nav-menu" id="navMenu">
+      <!-- Home Dropdown -->
+      <div class="nav-item">
+        <button class="nav-link" id="navHome">
+          Home
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown">
+          <a href="index.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="snowflake"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Home 1</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Cooling Solutions</div>
+            </div>
+          </a>
+          <a href="home2.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="flame"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Home 2</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Heating Solutions</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="about.html" class="nav-link" id="navAbout" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">About</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="services.html" class="nav-link" id="navServices" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Services</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="maintenance.html" class="nav-link" id="navMaintenance" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Maintenance</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="emergency.html" class="nav-link active" id="navEmergency" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Emergency</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="contact.html" class="nav-link" id="navContact" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Contact</a>
+      </div>
+
+      <!-- Dashboards Dropdown -->
+      <div class="nav-item">
+        <button class="nav-link" id="navDash">
+          Dashboards
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown">
+          <a href="user-dash.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="user"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">User Dashboard</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Client Portal</div>
+            </div>
+          </a>
+          <a href="admin-dash.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="settings"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Admin Dashboard</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Management</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Right -->
+    <div class="header-right">
+      <!-- RTL/LTR Toggle — shows active mode -->
+      <button class="rtl-toggle" id="rtlToggle" onclick="toggleRTL()" title="Toggle RTL/LTR">
+        <span class="rtl-toggle-icon"><i data-lucide="arrow-right-left"></i></span>
+        <span id="rtlLabel">LTR</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <span id="themeIcon"><i data-lucide="sun"></i></span>
+      </button>
+
+      <a href="login.html" class="header-cta" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">
+        <i data-lucide="log-in"></i> Sign In
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="main-content">
+
+  
+  <section class="emergency-hero" style="background-image:url(img_hero_emergency.png); background-size:cover; background-position:center; position:relative; min-height:70vh">
+    <div style="position:absolute;inset:0;background:rgba(220, 38, 38, 0.75);"></div>
+    <div class="container" style="position:relative;z-index:2">
+      <div style="font-family:var(--font-label);letter-spacing:0.2em;font-size:1.2rem;margin-bottom:1rem"><i data-lucide="alert-triangle"></i> IMMEDIATE DISPATCH</div>
+      <h1 style="color:#fff">DON'T PANIC.</h1>
+      <p style="font-size:1.5rem;max-width:600px;margin:2rem auto;color:#fff">Our trucks are fully stocked and rolling out right now.</p>
+    </div>
+  </section>
+</section>
+
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container" style="max-width:800px">
+      <h2 class="section-title" style="text-align:center;margin-bottom:3rem">Before you call, do this:</h2>
+      
+      <div class="giant-number-block">
+        <div class="gn-digit">1</div>
+        <div><h3 style="font-family:var(--font-head);font-size:1.5rem;margin-bottom:0.5rem">Switch Thermostat to OFF</h3><p style="color:var(--text-secondary)">Stop the system from trying to run to prevent electrical damage to the compressor.</p></div>
+      </div>
+      <div class="giant-number-block">
+        <div class="gn-digit">2</div>
+        <div><h3 style="font-family:var(--font-head);font-size:1.5rem;margin-bottom:0.5rem">Check the Breaker Box</h3><p style="color:var(--text-secondary)">Ensure a tripped breaker isn't the root cause. If it trips immediately again, leave it off.</p></div>
+      </div>
+      <div class="giant-number-block">
+        <div class="gn-digit">3</div>
+        <div><h3 style="font-family:var(--font-head);font-size:1.5rem;margin-bottom:0.5rem">Call Us Directly</h3><p style="color:var(--text-secondary)">Don't use the form. Call the hotline for immediate triage.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.85)), url('bg_emergency_pricing.jpg') center/cover no-repeat; padding: 6rem 0;">
+    <div class="container" style="max-width:600px;background:var(--bg-primary);padding:3rem;border:2px solid var(--border);border-top:8px solid #DC2626;border-radius:12px;text-align:center">
+      <h3 style="font-family:var(--font-label);text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:1rem">Transparent Pricing</h3>
+      <h2 style="font-family:var(--font-head);font-size:2.5rem;margin-bottom:1rem">Flat Dispatch Fee</h2>
+      <p style="color:var(--text-secondary);line-height:1.8">We charge a standardized $149 after-hours dispatch fee. The actual repair costs remain completely unchanged from daytime rates. No gouging.</p>
+    </div>
+  </section>
+
+  
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+        <div>
+          <h2 class="section-title" style="margin-bottom:1.5rem">Is it an emergency?</h2>
+          <p style="color:var(--text-secondary);font-size:1.1rem;line-height:1.8;margin-bottom:2rem">Not every issue requires after-hours dispatch. However, you should call immediately if you experience:</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem">
+            <li style="display:flex;gap:1rem;align-items:center;color:var(--text-secondary)"><i data-lucide="alert-circle" style="color:#DC2626"></i> Complete system failure in extreme weather</li>
+            <li style="display:flex;gap:1rem;align-items:center;color:var(--text-secondary)"><i data-lucide="alert-circle" style="color:#DC2626"></i> Burning smells or electrical sparks</li>
+            <li style="display:flex;gap:1rem;align-items:center;color:var(--text-secondary)"><i data-lucide="alert-circle" style="color:#DC2626"></i> Water leaking rapidly from indoor units</li>
+          </ul>
+        </div>
+        <div style="background:var(--bg-secondary);padding:3rem;border-radius:var(--radius-xl);text-align:center;border:1px solid var(--border)">
+          <div style="font-family:var(--font-head);font-size:4rem;font-weight:900;color:var(--brand-orange);line-height:1;margin-bottom:1rem">90</div>
+          <h3 style="font-family:var(--font-head);font-size:1.5rem;margin-bottom:1rem">Minute Guarantee</h3>
+          <p style="color:var(--text-secondary)">We guarantee a technician will be at your door within 90 minutes of your call, or the dispatch fee is waived entirely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ── WHAT HAPPENS AFTER YOU CALL ─────────────────────────── -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:1rem">What Happens After You Call</h2>
+      <p style="text-align:center;color:var(--text-secondary);max-width:600px;margin:0 auto 4rem">From the moment you dial, our dispatch machine kicks in. Here's exactly what to expect, minute by minute.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative">
+        <!-- connector line -->
+        <div style="position:absolute;top:2.5rem;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,#DC2626,var(--brand-orange));z-index:0"></div>
+        <!-- Step 1 -->
+        <div style="text-align:center;padding:0 1.5rem;position:relative;z-index:1">
+          <div style="width:5rem;height:5rem;background:#DC2626;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-head);font-size:1.5rem;font-weight:900;color:#fff;box-shadow:0 0 0 6px var(--bg-secondary),0 0 0 8px #DC2626">1</div>
+          <h4 style="font-family:var(--font-head);font-size:1.1rem;margin-bottom:0.5rem">You Call</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6">Our live operator answers in under 30 seconds — no bots, no menus.</p>
+        </div>
+        <!-- Step 2 -->
+        <div style="text-align:center;padding:0 1.5rem;position:relative;z-index:1">
+          <div style="width:5rem;height:5rem;background:var(--brand-orange);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-head);font-size:1.5rem;font-weight:900;color:#fff;box-shadow:0 0 0 6px var(--bg-secondary),0 0 0 8px var(--brand-orange)">2</div>
+          <h4 style="font-family:var(--font-head);font-size:1.1rem;margin-bottom:0.5rem">Triage</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6">We assess severity and match you with the nearest certified technician.</p>
+        </div>
+        <!-- Step 3 -->
+        <div style="text-align:center;padding:0 1.5rem;position:relative;z-index:1">
+          <div style="width:5rem;height:5rem;background:#DC2626;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-head);font-size:1.5rem;font-weight:900;color:#fff;box-shadow:0 0 0 6px var(--bg-secondary),0 0 0 8px #DC2626">3</div>
+          <h4 style="font-family:var(--font-head);font-size:1.1rem;margin-bottom:0.5rem">Dispatch</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6">Your tech gets a live GPS route. You get a real-time ETA via SMS.</p>
+        </div>
+        <!-- Step 4 -->
+        <div style="text-align:center;padding:0 1.5rem;position:relative;z-index:1">
+          <div style="width:5rem;height:5rem;background:var(--brand-orange);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-head);font-size:1.5rem;font-weight:900;color:#fff;box-shadow:0 0 0 6px var(--bg-secondary),0 0 0 8px var(--brand-orange)">4</div>
+          <h4 style="font-family:var(--font-head);font-size:1.1rem;margin-bottom:0.5rem">Fixed</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6">Trucks carry 95% of common parts. Most jobs are done in a single visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EMERGENCY TESTIMONIALS ──────────────────────────────── -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:1rem">When It Mattered Most</h2>
+      <p style="text-align:center;color:var(--text-secondary);max-width:500px;margin:0 auto 4rem">Real customers. Real emergencies. Real results.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem">
+        <!-- Review 1 -->
+        <div style="background:var(--bg-primary);padding:2rem;border-radius:var(--radius-xl);border:1px solid var(--border);border-top:4px solid #DC2626">
+          <div style="display:flex;gap:0.25rem;margin-bottom:1rem">
+            <span style="color:#F59E0B;font-size:1rem">★★★★★</span>
+          </div>
+          <p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;margin-bottom:1.5rem">"My AC died at 11 PM with my kids home. AirPro was at my door in 52 minutes. The technician had the part, fixed it on the spot, and was gone in an hour. Absolute lifesavers."</p>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Rodriguez" style="width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;">
+            <div><div style="font-weight:700;font-size:0.9rem">Maria Rodriguez</div><div style="color:var(--text-muted);font-size:0.8rem">Austin, TX — 2:00 AM Call</div></div>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div style="background:var(--bg-primary);padding:2rem;border-radius:var(--radius-xl);border:1px solid var(--border);border-top:4px solid var(--brand-orange)">
+          <div style="display:flex;gap:0.25rem;margin-bottom:1rem">
+            <span style="color:#F59E0B;font-size:1rem">★★★★★</span>
+          </div>
+          <p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;margin-bottom:1.5rem">"Furnace stopped working during a winter storm. Called at 3 AM expecting voicemail — a real person answered immediately. Tech showed up in 40 minutes. No extra charge for the holiday."</p>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Thompson" style="width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;">
+            <div><div style="font-weight:700;font-size:0.9rem">James Thompson</div><div style="color:var(--text-muted);font-size:0.8rem">Round Rock, TX — Holiday Emergency</div></div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div style="background:var(--bg-primary);padding:2rem;border-radius:var(--radius-xl);border:1px solid var(--border);border-top:4px solid #DC2626">
+          <div style="display:flex;gap:0.25rem;margin-bottom:1rem">
+            <span style="color:#F59E0B;font-size:1rem">★★★★★</span>
+          </div>
+          <p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;margin-bottom:1.5rem">"Smelled something burning from the unit. Called AirPro, they told me to cut the power immediately — advice over the phone before anyone even arrived. That professionalism is why I'll never switch."</p>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="SL" style="width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;">
+            <div><div style="font-weight:700;font-size:0.9rem">Sandra Lee</div><div style="color:var(--text-muted);font-size:0.8rem">Cedar Park, TX — Electrical Issue</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ────────────────────────────────────────────────── -->
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container" style="max-width:760px">
+      <h2 class="section-title" style="text-align:center;margin-bottom:4rem">Common Questions</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <details style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Do you charge extra for nights and weekends? <i data-lucide="plus" style="width:18px;color:#DC2626;flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Only the $149 dispatch fee applies for after-hours calls. All labor and parts are billed at our standard daytime rates. No weekend surcharges, no holiday markups.</p>
+        </details>
+        <details style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">What if you can't fix it in one visit? <i data-lucide="plus" style="width:18px;color:#DC2626;flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Our trucks carry 95% of common parts. If a specialty part is needed, we'll stabilize your system and return within 24 hours — at no additional dispatch fee.</p>
+        </details>
+        <details style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Is the 90-minute guarantee binding? <i data-lucide="plus" style="width:18px;color:#DC2626;flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Yes. If we arrive after 90 minutes from the time of your confirmed call, the $149 dispatch fee is fully waived. No questions asked.</p>
+        </details>
+        <details style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Do technicians carry ID and certification proof? <i data-lucide="plus" style="width:18px;color:#DC2626;flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Every technician carries a photo ID, their EPA 608 certification, and a background-check clearance badge. You'll also receive a text with their name and photo before they arrive.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+
+<!-- ═══════════════════════════════════════════
+     SITE FOOTER
+════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="text-decoration:none; margin-bottom:1rem">
+          <img src="img_logo.jpg" alt="AirPro HVAC Logo"/>
+          <div class="logo-text">
+            <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+            
+          </div>
+        </a>
+        <p class="footer-desc">Professional installation, repair, and maintenance for all heating and cooling systems. Trusted by over 15,000 homeowners.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.555.556.9 1.11 1.152 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772c-.556.556-1.11.9-1.772 1.153-.637.247-1.363.414-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.414-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 1 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><span class="fc-icon"><i data-lucide="phone"></i></span> <a href="tel:5551234567">(555) 123-4567</a></li>
+          <li><span class="fc-icon"><i data-lucide="mail"></i></span> <a href="mailto:support@airpro.com">support@airpro.com</a></li>
+          <li><span class="fc-icon"><i data-lucide="map-pin"></i></span> 123 Comfort Lane, Austin, TX</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AirPro HVAC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast Notification -->
+<div id="toast" style="
+  position:fixed;bottom:2rem;right:2rem;z-index:9999;
+  background:linear-gradient(135deg,var(--brand-orange),var(--brand-orange-lt));
+  color:#fff;padding:1rem 1.5rem;border-radius:var(--radius-md);
+  box-shadow:0 8px 32px rgba(232,93,4,0.5);
+  font-weight:600;font-size:0.9rem;
+  transform:translateY(100px);opacity:0;
+  transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  pointer-events:none;max-width:320px;
+  display:flex;align-items:center;gap:0.5rem
+">
+  <span id="toastIcon"><i data-lucide="check-circle"></i></span>
+  <span id="toastMsg">Action completed!</span>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>

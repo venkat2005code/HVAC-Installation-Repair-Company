@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/jpeg" href="img_logo.jpg"/>
+<title>AirPro HVAC — Premium Installation & Repair Services</title>
+<meta name="description" content="AirPro HVAC offers professional installation, repair, and maintenance for all heating and cooling systems. 24/7 emergency service. Trusted by 15,000+ homeowners."/>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" id="page-css" href="css/maintenance.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SITE HEADER
+════════════════════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="index.html" class="logo" id="logoBtn" style="text-decoration:none">
+      <img src="img_logo.jpg" alt="AirPro HVAC Logo"/>
+      <div class="logo-text">
+        <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+        
+      </div>
+    </a>
+
+    <!-- Nav Menu -->
+    <nav class="nav-menu" id="navMenu">
+      <!-- Home Dropdown -->
+      <div class="nav-item">
+        <button class="nav-link" id="navHome">
+          Home
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown">
+          <a href="index.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="snowflake"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Home 1</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Cooling Solutions</div>
+            </div>
+          </a>
+          <a href="home2.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="flame"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Home 2</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Heating Solutions</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="about.html" class="nav-link" id="navAbout" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">About</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="services.html" class="nav-link" id="navServices" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Services</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="maintenance.html" class="nav-link active" id="navMaintenance" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Maintenance</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="emergency.html" class="nav-link" id="navEmergency" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Emergency</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="contact.html" class="nav-link" id="navContact" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Contact</a>
+      </div>
+
+      <!-- Dashboards Dropdown -->
+      <div class="nav-item">
+        <button class="nav-link" id="navDash">
+          Dashboards
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown">
+          <a href="user-dash.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="user"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">User Dashboard</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Client Portal</div>
+            </div>
+          </a>
+          <a href="admin-dash.html" class="dropdown-item" style="text-decoration:none">
+            <div class="di-icon"><i data-lucide="settings"></i></div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Admin Dashboard</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Management</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Right -->
+    <div class="header-right">
+      <!-- RTL/LTR Toggle — shows active mode -->
+      <button class="rtl-toggle" id="rtlToggle" onclick="toggleRTL()" title="Toggle RTL/LTR">
+        <span class="rtl-toggle-icon"><i data-lucide="arrow-right-left"></i></span>
+        <span id="rtlLabel">LTR</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <span id="themeIcon"><i data-lucide="sun"></i></span>
+      </button>
+
+      <a href="login.html" class="header-cta" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">
+        <i data-lucide="log-in"></i> Sign In
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="main-content">
+
+  
+  <section class="hero-cinematic" style="min-height:60vh">
+    <div class="hero-cinematic-bg" style="background-image:url(img_hero_maintenance.png); filter:brightness(0.4)"></div>
+    <div class="hero-cinematic-content">
+      <div class="section-label" style="background:rgba(232,93,4,0.2);padding:0.5rem 1rem;border-radius:20px;color:var(--brand-orange);margin-bottom:1rem">Maintenance</div>
+      <h1 style="color:#fff;margin-bottom:0">Protect Your Asset</h1>
+    </div>
+  </section>
+</section>
+
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div class="pricing-tier-table">
+        <div class="tier-col">
+          <h3 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:1rem">Basic</h3>
+          <div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:2rem">$89<span style="font-size:1rem;color:var(--text-muted)">/yr</span></div>
+          <ul style="list-style:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> 1 Annual Tune-up</li>
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> Filter change</li>
+          </ul>
+          <a href="#" class="btn btn-outline" style="width:100%;justify-content:center">Select</a>
+        </div>
+        <div class="tier-col highlight">
+          <div style="background:var(--brand-orange);color:#fff;padding:0.25rem;font-size:0.75rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.1em;border-radius:4px;margin-bottom:1rem;display:inline-block">Most Popular</div>
+          <h3 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:1rem">Standard</h3>
+          <div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:2rem">$149<span style="font-size:1rem;color:var(--text-muted)">/yr</span></div>
+          <ul style="list-style:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> 2 Annual Tune-ups</li>
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> 15% Repair Discount</li>
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> 24hr Priority</li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="width:100%;justify-content:center">Select</a>
+        </div>
+        <div class="tier-col">
+          <h3 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:1rem">Premium</h3>
+          <div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:2rem">$299<span style="font-size:1rem;color:var(--text-muted)">/yr</span></div>
+          <ul style="list-style:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> 2 Annual Tune-ups</li>
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> Free Filters</li>
+            <li><i data-lucide="check-circle" style="color:var(--brand-orange)"></i> No Dispatch Fee</li>
+          </ul>
+          <a href="#" class="btn btn-outline" style="width:100%;justify-content:center">Select</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:3rem">The 21-Point Technical Audit</h2>
+      <div style="columns:2;column-gap:4rem;max-width:800px;margin:0 auto;color:var(--text-secondary);font-size:1.05rem;line-height:2">
+        <div><i data-lucide="check-circle" style="color:var(--brand-orange);margin-right:0.5rem"></i> Capacitor microfarad test</div>
+        <div><i data-lucide="check-circle" style="color:var(--brand-orange);margin-right:0.5rem"></i> Contactor pitting inspection</div>
+        <div><i data-lucide="check-circle" style="color:var(--brand-orange);margin-right:0.5rem"></i> Delta-T temperature drop</div>
+        <div><i data-lucide="check-circle" style="color:var(--brand-orange);margin-right:0.5rem"></i> Subcooling/Superheat check</div>
+        <div><i data-lucide="check-circle" style="color:var(--brand-orange);margin-right:0.5rem"></i> Blower amp draw</div>
+        <div><i data-lucide="check-circle" style="color:var(--brand-orange);margin-right:0.5rem"></i> Condensate drain flush</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div style="display:flex;gap:4rem;align-items:center;background:var(--bg-primary);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border)">
+        <div style="flex:1;padding:4rem">
+          <div class="section-label">Business Solutions</div>
+          <h2 class="section-title">Commercial Maintenance</h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:2rem">We offer customized quarterly and bi-annual maintenance contracts for commercial Rooftop Units (RTUs), chillers, and server room cooling systems.</p>
+          <a href="contact.html" class="btn btn-outline">Request Commercial Bid</a>
+        </div>
+        <div style="flex:1;height:100%;min-height:400px;background-image:url(img_maintenance_commercial.png);background-size:cover;background-position:center;opacity:0.8"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:3rem">Why Maintain?</h2>
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:2rem">
+        <div class="card" style="background:var(--bg-secondary);text-align:center"><div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:1rem">30%</div><h4 style="font-family:var(--font-head);font-size:1.2rem">Lower Energy Bills</h4><p style="color:var(--text-secondary);font-size:0.9rem;margin-top:1rem">Clean coils and fresh filters significantly reduce the power required to condition your air.</p></div>
+        <div class="card" style="background:var(--bg-secondary);text-align:center"><div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:1rem">2x</div><h4 style="font-family:var(--font-head);font-size:1.2rem">System Lifespan</h4><p style="color:var(--text-secondary);font-size:0.9rem;margin-top:1rem">Regularly maintained systems easily outlast neglected ones by 5 to 10 years.</p></div>
+        <div class="card" style="background:var(--bg-secondary);text-align:center"><div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:1rem">95%</div><h4 style="font-family:var(--font-head);font-size:1.2rem">Fewer Breakdowns</h4><p style="color:var(--text-secondary);font-size:0.9rem;margin-top:1rem">Catching small issues early prevents catastrophic, expensive failures during peak seasons.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MAINTENANCE FAQ ──────────────────────────────────────── -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container" style="max-width:760px">
+      <h2 class="section-title" style="text-align:center;margin-bottom:4rem">Maintenance FAQ</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <details style="background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">How often should I service my HVAC system? <i data-lucide="plus" style="width:18px;color:var(--brand-orange);flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">We recommend at least one tune-up per season — ideally before summer for your AC and before winter for your heating system. Our Standard and Premium plans cover this automatically.</p>
+        </details>
+        <details style="background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">What is included in the 21-point audit? <i data-lucide="plus" style="width:18px;color:var(--brand-orange);flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Our technicians test capacitors, inspect contactors, measure delta-T, check subcooling and superheat values, measure blower amp draw, flush condensate drains, and 15 additional diagnostic checks — all documented in a written report.</p>
+        </details>
+        <details style="background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I cancel my plan at any time? <i data-lucide="plus" style="width:18px;color:var(--brand-orange);flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Yes. Our maintenance plans are month-to-month with no long-term contracts. You can cancel or upgrade your plan any time by calling our office or through your account portal.</p>
+        </details>
+        <details style="background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer">
+          <summary style="font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Does the plan cover parts and repairs? <i data-lucide="plus" style="width:18px;color:var(--brand-orange);flex-shrink:0"></i></summary>
+          <p style="color:var(--text-secondary);margin-top:1rem;line-height:1.8;font-size:0.95rem">Tune-up labor is fully covered. Parts and repairs are discounted — 15% off on Standard, and the Premium plan waives the dispatch fee on all service calls. Repairs themselves are billed at our standard flat-rate pricing.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-primary);border-top:1px solid var(--border)">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;background:var(--bg-secondary);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border)">
+        <div style="flex:1;min-width:300px;background:url('img_maintenance_proactive.png') center/cover no-repeat;min-height:400px"></div>
+        <div style="flex:1;min-width:300px;padding:4rem;display:flex;flex-direction:column;justify-content:center">
+          <h2 class="section-title" style="margin-bottom:1rem">Save Thousands on Premature Replacements</h2>
+          <p style="color:var(--text-secondary);font-size:1.1rem;line-height:1.7;margin-bottom:2rem">Proactive maintenance doesn't just prevent unexpected breakdowns—it drastically extends the lifespan of your unit and lowers your monthly utility bills. Protect your investment today.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary">Choose Your Maintenance Plan</a>
+            <a href="contact.html" class="btn btn-outline">Talk to an Expert</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<!-- ═══════════════════════════════════════════
+     SITE FOOTER
+════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="text-decoration:none; margin-bottom:1rem">
+          <img src="img_logo.jpg" alt="AirPro HVAC Logo"/>
+          <div class="logo-text">
+            <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+            
+          </div>
+        </a>
+        <p class="footer-desc">Professional installation, repair, and maintenance for all heating and cooling systems. Trusted by over 15,000 homeowners.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.555.556.9 1.11 1.152 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772c-.556.556-1.11.9-1.772 1.153-.637.247-1.363.414-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.414-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 1 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><span class="fc-icon"><i data-lucide="phone"></i></span> <a href="tel:5551234567">(555) 123-4567</a></li>
+          <li><span class="fc-icon"><i data-lucide="mail"></i></span> <a href="mailto:support@airpro.com">support@airpro.com</a></li>
+          <li><span class="fc-icon"><i data-lucide="map-pin"></i></span> 123 Comfort Lane, Austin, TX</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AirPro HVAC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast Notification -->
+<div id="toast" style="
+  position:fixed;bottom:2rem;right:2rem;z-index:9999;
+  background:linear-gradient(135deg,var(--brand-orange),var(--brand-orange-lt));
+  color:#fff;padding:1rem 1.5rem;border-radius:var(--radius-md);
+  box-shadow:0 8px 32px rgba(232,93,4,0.5);
+  font-weight:600;font-size:0.9rem;
+  transform:translateY(100px);opacity:0;
+  transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  pointer-events:none;max-width:320px;
+  display:flex;align-items:center;gap:0.5rem
+">
+  <span id="toastIcon"><i data-lucide="check-circle"></i></span>
+  <span id="toastMsg">Action completed!</span>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* ABOUT */
+.page-hero {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.page-hero h1 { font-family: var(--font-head); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1rem; }
+.page-hero p { font-size: 1.05rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.75; }
+
+.about-story { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-story-img {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+}
+.about-story-img img { width: 100%; border-radius: var(--radius-xl); }
+.about-yrs-badge {
+  position: absolute; bottom: 1.5rem; right: 1.5rem;
+  background: linear-gradient(135deg, var(--brand-orange), var(--brand-orange-lt));
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(232,93,4,0.5);
+}
+.about-yrs-badge .yrs-num { font-family: var(--font-head); font-size: 2.5rem; font-weight: 800; color: #fff; line-height: 1; }
+.about-yrs-badge .yrs-txt { font-size: 0.8rem; color: rgba(255,255,255,0.85); font-weight: 600; }
+
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.value-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem 1.5rem;
+  text-align: center; transition: all var(--dur-mid) var(--ease);
+}
+.value-card:hover { transform: translateY(-5px); border-color: var(--border-accent); box-shadow: var(--shadow-card); }
+.value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.value-card h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.value-card p { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.65; }
+
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.team-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; text-align: center; transition: all var(--dur-mid) var(--ease); }
+.team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--border-accent); }
+.team-card-avatar { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 4rem; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card-hover)); border-bottom: 1px solid var(--border); }
+.team-card-body { padding: 1.25rem 1rem; }
+.team-card h4 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.25rem; }
+.team-card .role { font-family: var(--font-label); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-orange); }
+

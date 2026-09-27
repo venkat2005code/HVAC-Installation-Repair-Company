@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AirPro HVAC — Premium Installation & Repair Services</title>
+<meta name="description" content="AirPro HVAC offers professional installation, repair, and maintenance for all heating and cooling systems. 24/7 emergency service. Trusted by 15,000+ homeowners."/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SITE HEADER
+════════════════════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <!-- Logo -->
+    <div class="logo" onclick="navigate('home1')" id="logoBtn">
+      <img src="img_logo.jpg" alt="AirPro HVAC Logo"/>
+      <div class="logo-text">
+        <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+        
+      </div>
+    </div>
+
+    <!-- Nav Menu -->
+    <nav class="nav-menu" id="navMenu">
+      <!-- Home Dropdown -->
+      <div class="nav-item">
+        <button class="nav-link" id="navHome">
+          Home
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown">
+          <div class="dropdown-item" onclick="navigate('home1')">
+            <div class="di-icon">❄️</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Home 1</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Cooling Solutions</div>
+            </div>
+          </div>
+          <div class="dropdown-item" onclick="navigate('home2')">
+            <div class="di-icon">🔥</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Home 2</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Heating Solutions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link" onclick="navigate('about')" id="navAbout">About</button>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link" onclick="navigate('services')" id="navServices">Services</button>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link" onclick="navigate('maintenance')" id="navMaintenance">Maintenance</button>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link" onclick="navigate('emergency')" id="navEmergency">Emergency</button>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link" onclick="navigate('contact')" id="navContact">Contact</button>
+      </div>
+
+      <!-- Dashboards Dropdown -->
+      <div class="nav-item">
+        <button class="nav-link" id="navDash">
+          Dashboards
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown">
+          <div class="dropdown-item" onclick="navigate('user-dash')">
+            <div class="di-icon">👤</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">User Dashboard</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Client Portal</div>
+            </div>
+          </div>
+          <div class="dropdown-item" onclick="navigate('admin-dash')">
+            <div class="di-icon">⚙️</div>
+            <div>
+              <div style="font-weight:700;font-size:0.88rem;color:var(--text-primary)">Admin Dashboard</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Management</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Right -->
+    <div class="header-right">
+      <!-- RTL/LTR Toggle — shows active mode -->
+      <button class="rtl-toggle" id="rtlToggle" onclick="toggleRTL()" title="Toggle RTL/LTR">
+        <span class="rtl-toggle-icon">⇄</span>
+        <span id="rtlLabel">LTR</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <span id="themeIcon">☀️</span>
+      </button>
+
+      <button class="header-cta" onclick="navigate('login')">
+        🔑 Sign In
+      </button>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="main-content">
+
+<!-- ─────────────────────────────────────────
+     HOME 1 — COOLING SOLUTIONS
+──────────────────────────────────────────── -->
+<div class="view active" id="view-home1">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url(img_cooling.jpg)"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">⭐ #1 Rated HVAC Company in the Region</div>
+        <h1 class="hero-title">
+          Stay <span class="accent">Cool.</span><br/>
+          Stay Comfortable.
+        </h1>
+        <p class="hero-desc">Expert cooling solutions tailored for your home. From precision AC installation to rapid emergency repairs — we keep your environment perfect year-round.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="navigate('contact')">📅 Schedule Service</button>
+          <button class="btn btn-outline" onclick="navigate('services')">Explore Services →</button>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><div class="ti-icon">✅</div> Licensed & Insured</div>
+          <div class="trust-item"><div class="ti-icon">⚡</div> Same-Day Service</div>
+          <div class="trust-item"><div class="ti-icon">🛡️</div> 5-Year Warranty</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="25">0</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="15000">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-label">% Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="247">0</div>
+          <div class="stat-label">24/7 Emergency Line</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Overview -->
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="section-label">Our Cooling Services</div>
+        <h2 class="section-title">Complete Air Comfort Solutions</h2>
+        <p class="section-subtitle" style="margin:0 auto">From central systems to mini-splits, we handle every cooling need with precision and care.</p>
+      </div>
+      <div class="service-cards-grid">
+        <div class="service-card">
+          <div class="service-card-icon">❄️</div>
+          <h3>AC Installation</h3>
+          <p>Professional installation of central air conditioners, ductless mini-splits, and heat pump systems. Energy-efficient units that cut bills by up to 40%.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🔧</div>
+          <h3>AC Repair & Diagnostics</h3>
+          <p>Fast, reliable repairs for all makes and models. Our certified technicians diagnose the issue right the first time with advanced diagnostic tools.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🌬️</div>
+          <h3>Duct Cleaning & Air Quality</h3>
+          <p>Improve indoor air quality with professional duct cleaning. Remove allergens, mold spores, and debris for healthier, cleaner air in every room.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">📋</div>
+          <h3>Preventive Maintenance</h3>
+          <p>Keep your system running at peak efficiency with our seasonal tune-up plans. Prevent breakdowns before they happen and extend equipment life.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">⚡</div>
+          <h3>Emergency Cooling</h3>
+          <p>AC failure in summer heat? Our 24/7 emergency team arrives within 90 minutes to restore your comfort, day or night, weekends and holidays.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🏠</div>
+          <h3>Smart Thermostat Setup</h3>
+          <p>Upgrade to intelligent climate control with smart thermostat installation. Save up to 23% on energy bills with automated scheduling and remote control.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="features-wrap">
+        <div>
+          <div class="section-label">Why AirPro?</div>
+          <h2 class="section-title">Built on Trust, Driven by Excellence</h2>
+          <p class="section-subtitle" style="margin-bottom:2rem">We've spent 25 years building a reputation for honest, expert HVAC service that customers rely on season after season.</p>
+          <button class="btn btn-primary" onclick="navigate('about')">Our Story →</button>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">🏆</div>
+            <div class="feature-text">
+              <h4>Certified Technicians</h4>
+              <p>All techs are NATE-certified with ongoing training in the latest HVAC technology.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⏱️</div>
+            <div class="feature-text">
+              <h4>On-Time Guarantee</h4>
+              <p>We arrive within your scheduled window or we credit your next service call.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">💰</div>
+            <div class="feature-text">
+              <h4>Transparent Pricing</h4>
+              <p>Upfront quotes with no hidden fees. You approve every cost before we start work.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-text">
+              <h4>Parts & Labor Warranty</h4>
+              <p>Every repair and installation backed by our comprehensive 5-year warranty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="section-label">Customer Reviews</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"AirPro installed our new central AC system last summer. The crew was professional, fast, and left everything spotless. Our energy bills dropped by 35%!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div class="author-info">
+              <div class="name">Jennifer Mitchell</div>
+              <div class="role">Homeowner, Austin TX</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Called at 2am when our AC died during a heat wave. Tech arrived in under an hour, fixed it on the spot. Absolutely lifesaving service!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RC</div>
+            <div class="author-info">
+              <div class="name">Robert Chen</div>
+              <div class="role">Business Owner</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The maintenance plan is worth every penny. They catch issues before they become expensive problems. Haven't had a breakdown in 3 years."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SA</div>
+            <div class="author-info">
+              <div class="name">Sarah Anderson</div>
+              <div class="role">Property Manager</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Ready for Perfect Comfort?</h2>
+        <p>Schedule your free in-home assessment today. No pressure, just honest advice.</p>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="navigate('contact')">📅 Book Free Assessment</button>
+          <button class="btn" style="background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.2)" onclick="navigate('emergency')">📞 Call Now: (555) 247-0000</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- END HOME 1 -->
+
+<!-- ─────────────────────────────────────────
+     HOME 2 — HEATING SOLUTIONS
+──────────────────────────────────────────── -->
+<div class="view" id="view-home2">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url(img_heating.jpg)"></div>
+    <div class="hero-overlay" style="background:linear-gradient(105deg,rgba(26,5,5,0.95) 0%,rgba(45,10,10,0.78) 45%,rgba(26,5,5,0.25) 100%)"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow" style="color:#f87171;background:rgba(239,68,68,0.10);border-color:rgba(239,68,68,0.25)">🔥 Heating Season Ready</div>
+        <h1 class="hero-title">
+          Warmth When<br/>
+          You <span class="accent">Need It Most.</span>
+        </h1>
+        <p class="hero-desc">Comprehensive heating solutions from furnace installation to emergency heat pump repair. We keep every room warm and your family comfortable all winter long.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="navigate('maintenance')">📋 View Heating Plans</button>
+          <button class="btn btn-outline" onclick="navigate('emergency')">🚨 Emergency Heat →</button>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><div class="ti-icon">🔥</div> Gas & Electric Systems</div>
+          <div class="trust-item"><div class="ti-icon">⚡</div> 90-Min Emergency</div>
+          <div class="trust-item"><div class="ti-icon">🌡️</div> All Makes & Models</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Split -->
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div class="home2-features">
+        <div class="home2-img-wrap">
+          <img src="img_heating.jpg" alt="Cozy warm home with HVAC heating"/>
+          <div class="home2-badge">
+            <div class="b-icon">🏆</div>
+            <div class="b-text">
+              <div class="b-num">4.9★</div>
+              <div class="b-label">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Heating Experts</div>
+          <h2 class="section-title">Complete Heating System Specialists</h2>
+          <p class="section-subtitle" style="margin-bottom:1.5rem">Whether you need a new furnace, heat pump replacement, or emergency boiler repair — our team delivers unmatched warmth and reliability every single time.</p>
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
+            <div class="feature-item">
+              <div class="feature-icon">🔥</div>
+              <div class="feature-text">
+                <h4>Furnace Installation & Replacement</h4>
+                <p>High-efficiency gas and electric furnaces installed by certified specialists. Up to 98% AFUE rating for maximum savings.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">♨️</div>
+              <div class="feature-text">
+                <h4>Heat Pump Systems</h4>
+                <p>Modern heat pumps that both heat and cool with exceptional energy efficiency. Ideal for moderate climates.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🏠</div>
+              <div class="feature-text">
+                <h4>Zone Heating Control</h4>
+                <p>Custom zoning systems so every room reaches its ideal temperature independently, reducing waste and boosting comfort.</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="navigate('services')">Explore All Heating Services →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heating Service Cards -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="section-label">Heating Services</div>
+        <h2 class="section-title">Every Heating Need, Covered</h2>
+      </div>
+      <div class="service-cards-grid">
+        <div class="service-card">
+          <div class="service-card-icon">🔥</div>
+          <h3>Furnace Installation</h3>
+          <p>New high-efficiency furnaces installed with expert sizing, ductwork assessment, and full commissioning. Includes smart thermostat setup.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🔧</div>
+          <h3>Furnace Repair</h3>
+          <p>Diagnose and repair any furnace issue — igniter, heat exchanger, blower motor, gas valve. Most repairs completed same day.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">♨️</div>
+          <h3>Heat Pump Service</h3>
+          <p>Installation, repair, and seasonal maintenance for all heat pump brands. Reversing valve, refrigerant recharge, and more.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">💧</div>
+          <h3>Boiler Service</h3>
+          <p>Expert boiler installation and repair for hydronic heating systems. Steam, hot water, and combi-boiler specialists.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🌡️</div>
+          <h3>Radiant Floor Heating</h3>
+          <p>Design and install in-floor radiant heating systems for the ultimate comfort upgrade in any room of your home.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">📋</div>
+          <h3>Annual Heating Tune-Up</h3>
+          <p>Pre-season inspection and tune-up to catch potential issues before the cold hits. 21-point safety inspection included.</p>
+          <span class="service-card-link">Learn More →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Banner -->
+  <section style="background:linear-gradient(135deg,#150505,#2a0808);padding:4rem 0;border-top:1px solid rgba(239,68,68,0.2)">
+    <div class="container" style="text-align:center">
+      <div class="emergency-badge" style="margin:0 auto 1.5rem">🚨 24/7 Emergency Heating</div>
+      <h2 style="font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;margin-bottom:1rem;letter-spacing:-0.03em">Furnace Down at Midnight?<br/>We're Ready.</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.05rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">No heat call is too urgent. Our emergency dispatch gets a certified technician to your door within 90 minutes.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-danger" onclick="navigate('emergency')">🚨 Emergency Service</button>
+        <button class="btn btn-outline" style="border-color:rgba(239,68,68,0.4);color:#f87171" onclick="navigate('maintenance')">📋 Heating Plans</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- END HOME 2 -->
+
+<!-- ─────────────────────────────────────────
+     ABOUT PAGE
+──────────────────────────────────────────── -->
+<div class="view" id="view-about">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">Our Story</div>
+      <h1>25 Years of Comfort<br/><span style="background:linear-gradient(135deg,var(--brand-orange),var(--brand-orange-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Engineering Excellence</span></h1>
+      <p>Family-owned and locally trusted. AirPro HVAC was built on the belief that every home deserves reliable, expert comfort systems and honest, caring service.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div class="about-story">
+        <div class="about-story-img">
+          <img src="img_cooling.jpg" alt="AirPro HVAC team at work" style="border-radius:20px"/>
+          <div class="about-yrs-badge">
+            <div class="yrs-num">25+</div>
+            <div class="yrs-txt">Years Serving<br/>Our Community</div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">A Legacy Built on Comfort</h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;font-size:0.95rem">Founded in 1999 by master technician Robert Airdale, AirPro HVAC began as a two-person operation with one simple mission: provide honest, expert HVAC service that homeowners could actually trust.</p>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;font-size:0.95rem">Today, we operate a team of 45+ certified technicians serving the greater metropolitan area, completing over 8,000 service calls each year. Yet our core values remain unchanged — integrity, excellence, and genuine care for every customer.</p>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:2rem;font-size:0.95rem">We're proud to be the #1 rated HVAC company in our region for the 5th consecutive year, recognized for our 98% customer satisfaction rate and same-day service guarantee.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="navigate('contact')">Work With Us</button>
+            <button class="btn btn-outline" onclick="navigate('services')">Our Services</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="section-label">Our Values</div>
+        <h2 class="section-title">What Drives Everything We Do</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🏆</div>
+          <h3>Excellence</h3>
+          <p>We hold ourselves to the highest industry standards, continuously training our team and investing in the best equipment and technology.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Integrity</h3>
+          <p>We're transparent about every cost, every recommendation, and every timeline. No upsells, no surprises — just honest service.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❤️</div>
+          <h3>Care</h3>
+          <p>We treat every home like our own. Our technicians are respectful, clean, and committed to leaving your space better than we found it.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Urgency</h3>
+          <p>We understand that HVAC problems can't wait. We respond fast, diagnose correctly the first time, and complete work when we say we will.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3>Sustainability</h3>
+          <p>We prioritize energy-efficient solutions that reduce your carbon footprint and keep utility bills low for years to come.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌟</div>
+          <h3>Community</h3>
+          <p>As a locally-owned business, we invest back into our community through local partnerships, charitable giving, and fair employment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="section-label">Meet the Team</div>
+        <h2 class="section-title">The Experts Behind Your Comfort</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-card-avatar">👨‍🔧</div>
+          <div class="team-card-body">
+            <h4>Robert Airdale</h4>
+            <div class="role">Founder & CEO</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">25+ years master technician</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card-avatar">👩‍💼</div>
+          <div class="team-card-body">
+            <h4>Maria Santos</h4>
+            <div class="role">Operations Director</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">Scheduling & customer care</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card-avatar">👨‍🔬</div>
+          <div class="team-card-body">
+            <h4>James Kowalski</h4>
+            <div class="role">Lead Technician</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">NATE Certified, 15 yrs exp</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card-avatar">👩‍🔧</div>
+          <div class="team-card-body">
+            <h4>Priya Nair</h4>
+            <div class="role">Energy Consultant</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">Green HVAC specialist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="section-label">Certifications & Awards</div>
+        <h2 class="section-title">Recognized for Excellence</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem">
+        <div class="card" style="text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🏅</div>
+          <h4 style="font-family:var(--font-head);font-size:0.9rem;font-weight:700;margin-bottom:0.25rem">NATE Certified</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">North American Technician Excellence</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">⭐</div>
+          <h4 style="font-family:var(--font-head);font-size:0.9rem;font-weight:700;margin-bottom:0.25rem">EPA 608 Certified</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">Refrigerant handling certified</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🛡️</div>
+          <h4 style="font-family:var(--font-head);font-size:0.9rem;font-weight:700;margin-bottom:0.25rem">BBB A+ Rated</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">Better Business Bureau accredited</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🌿</div>
+          <h4 style="font-family:var(--font-head);font-size:0.9rem;font-weight:700;margin-bottom:0.25rem">Energy Star Partner</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">EPA Energy Star certified dealer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- END ABOUT -->
+
+<!-- ─────────────────────────────────────────
+     SERVICES PAGE
+──────────────────────────────────────────── -->
+<div class="view" id="view-services">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">What We Do</div>
+      <h1>Professional HVAC Services<br/><span style="background:linear-gradient(135deg,var(--brand-orange),var(--brand-orange-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">For Every Season</span></h1>
+      <p>Comprehensive heating, cooling, and air quality solutions. From new system installation to emergency repairs — we do it all, and we do it right.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div class="services-main-grid">
+        <!-- Installation -->
+        <div class="service-big-card">
+          <div class="sbc-header">
+            <div class="sbc-icon">🏗️</div>
+            <div>
+              <div class="tag">Installation</div>
+              <h3>New System Installation</h3>
+            </div>
+          </div>
+          <div class="sbc-body">
+            <p>Expert installation of any HVAC system, sized perfectly for your home. We handle everything from permits and ductwork to final testing and smart thermostat programming.</p>
+            <div class="sbc-features">
+              <div class="sbc-feature"><div class="check">✓</div>Central Air Conditioning</div>
+              <div class="sbc-feature"><div class="check">✓</div>Ductless Mini-Split Systems</div>
+              <div class="sbc-feature"><div class="check">✓</div>Gas & Electric Furnaces</div>
+              <div class="sbc-feature"><div class="check">✓</div>Heat Pump Systems</div>
+              <div class="sbc-feature"><div class="check">✓</div>Boiler & Radiant Heat</div>
+              <div class="sbc-feature"><div class="check">✓</div>Smart Thermostat Setup</div>
+            </div>
+            <button class="btn btn-primary" onclick="navigate('contact')">Get Free Quote</button>
+          </div>
+        </div>
+
+        <!-- Repair -->
+        <div class="service-big-card">
+          <div class="sbc-header">
+            <div class="sbc-icon">🔧</div>
+            <div>
+              <div class="tag">Repair & Diagnostics</div>
+              <h3>Expert Repair Service</h3>
+            </div>
+          </div>
+          <div class="sbc-body">
+            <p>Fast, accurate diagnosis and repair for all HVAC brands and models. Our trucks are fully stocked with parts so most repairs are completed on the first visit.</p>
+            <div class="sbc-features">
+              <div class="sbc-feature"><div class="check">✓</div>AC Not Cooling Repair</div>
+              <div class="sbc-feature"><div class="check">✓</div>Furnace Not Heating</div>
+              <div class="sbc-feature"><div class="check">✓</div>Refrigerant Recharge</div>
+              <div class="sbc-feature"><div class="check">✓</div>Compressor Replacement</div>
+              <div class="sbc-feature"><div class="check">✓</div>Capacitor & Motor Repair</div>
+              <div class="sbc-feature"><div class="check">✓</div>Control Board Diagnostics</div>
+            </div>
+            <button class="btn btn-primary" onclick="navigate('contact')">Book Repair</button>
+          </div>
+        </div>
+
+        <!-- Duct Cleaning -->
+        <div class="service-big-card">
+          <div class="sbc-header">
+            <div class="sbc-icon">🌬️</div>
+            <div>
+              <div class="tag">Air Quality</div>
+              <h3>Duct Cleaning & Air Quality</h3>
+            </div>
+          </div>
+          <div class="sbc-body">
+            <p>Professional duct cleaning removes years of built-up dust, allergens, and mold spores. Breathe cleaner air and improve HVAC efficiency by up to 20%.</p>
+            <div class="sbc-features">
+              <div class="sbc-feature"><div class="check">✓</div>Complete Duct Inspection</div>
+              <div class="sbc-feature"><div class="check">✓</div>High-Power Vacuum Cleaning</div>
+              <div class="sbc-feature"><div class="check">✓</div>Antimicrobial Treatment</div>
+              <div class="sbc-feature"><div class="check">✓</div>Duct Sealing & Repair</div>
+              <div class="sbc-feature"><div class="check">✓</div>HEPA Filter Replacement</div>
+              <div class="sbc-feature"><div class="check">✓</div>Air Quality Testing</div>
+            </div>
+            <button class="btn btn-primary" onclick="navigate('contact')">Schedule Cleaning</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:4rem">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Our Simple 4-Step Process</h2>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h4>Schedule & Assess</h4>
+          <p>Book online or call us. We arrive on time and perform a thorough system assessment at no charge.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h4>Transparent Quote</h4>
+          <p>Receive a detailed, written quote covering all parts and labor. No hidden fees — ever.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h4>Expert Service</h4>
+          <p>Our certified technicians complete your service with premium parts and professional care.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h4>Quality Guarantee</h4>
+          <p>We verify everything works perfectly and back our work with our 5-year parts & labor warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- END SERVICES -->
+
+<!-- ─────────────────────────────────────────
+     MAINTENANCE PLANS PAGE
+──────────────────────────────────────────── -->
+<div class="view" id="view-maintenance">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">Maintenance Plans</div>
+      <h1>Protect Your Investment<br/><span style="background:linear-gradient(135deg,var(--brand-orange),var(--brand-orange-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Year-Round</span></h1>
+      <p>Choose a plan that matches your needs. All plans include priority scheduling, discounted repairs, and seasonal inspections performed by certified technicians.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--bg-primary)">
+    <div class="container">
+      <div class="pricing-grid">
+        <!-- Basic -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <div class="plan-name">Basic</div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount">89</span>
+              <span class="period">/yr</span>
+            </div>
+            <p class="plan-desc">Essential annual maintenance for single-system homeowners wanting baseline peace of mind.</p>
+          </div>
+          <div class="plan-body">
+            <div class="plan-features">
+              <div class="feature-check"><div class="chk">✓</div>1 Annual System Tune-Up</div>
+              <div class="feature-check"><div class="chk">✓</div>21-Point Safety Inspection</div>
+              <div class="feature-check"><div class="chk">✓</div>Filter Replacement (1x)</div>
+              <div class="feature-check"><div class="chk">✓</div>10% Discount on Repairs</div>
+              <div class="feature-check"><div class="chk no">✗</div>Priority Scheduling</div>
+              <div class="feature-check"><div class="chk no">✗</div>Emergency Service Discount</div>
+              <div class="feature-check"><div class="chk no">✗</div>Parts Warranty Extension</div>
+            </div>
+            <button class="btn btn-outline w-full" onclick="navigate('contact')">Get Started</button>
+          </div>
+        </div>
+
+        <!-- Standard — Featured -->
+        <div class="plan-card featured">
+          <div class="plan-popular">⭐ Most Popular</div>

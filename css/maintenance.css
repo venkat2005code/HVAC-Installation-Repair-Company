@@ -1,0 +1,27 @@
+/* MAINTENANCE PLANS */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
+.plan-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; transition: all var(--dur-mid) var(--ease); position: relative; }
+.plan-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+.plan-card.featured { border-color: var(--brand-orange); box-shadow: 0 0 0 1px rgba(232,93,4,0.4), var(--shadow-glow); transform: scale(1.03); }
+.plan-card.featured:hover { transform: scale(1.03) translateY(-6px); }
+.plan-popular { background: linear-gradient(90deg, var(--brand-orange), var(--brand-orange-lt)); color: #fff; text-align: center; padding: 0.4rem 0; font-family: var(--font-label); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.plan-header { padding: 2rem 2rem 1.5rem; border-bottom: 1px solid var(--border); }
+.plan-name { font-family: var(--font-label); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brand-orange); margin-bottom: 0.5rem; }
+.plan-price { display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 0.5rem; }
+.plan-price .currency { font-size: 1.5rem; font-weight: 700; color: var(--text-secondary); align-self: flex-start; margin-top: 0.5rem; }
+.plan-price .amount { font-family: var(--font-head); font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; color: var(--text-primary); }
+.plan-price .period { font-size: 0.9rem; color: var(--text-muted); }
+.plan-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.plan-body { padding: 1.75rem 2rem 2rem; }
+.plan-features { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.75rem; }
+.feature-check { display: flex; align-items: center; gap: 0.75rem; font-size: 0.87rem; color: var(--text-secondary); }
+.feature-check .chk {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: #22c55e; flex-shrink: 0;
+}
+.feature-check .chk.no { background: rgba(100,116,139,0.12); border-color: rgba(100,116,139,0.2); color: var(--text-muted); }
+

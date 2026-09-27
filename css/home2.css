@@ -1,0 +1,17 @@
+/* HOME 2 */
+.home2-features { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.home2-img-wrap { position: relative; border-radius: var(--radius-xl); overflow: hidden; }
+.home2-img-wrap img { width: 100%; border-radius: var(--radius-xl); }
+.home2-badge {
+  position: absolute; bottom: 1.5rem; left: 1.5rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.home2-badge .b-icon { font-size: 1.8rem; }
+.home2-badge .b-text .b-num { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--brand-orange); }
+.home2-badge .b-text .b-label { font-size: 0.75rem; color: var(--text-secondary); }
+
