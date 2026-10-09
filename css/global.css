@@ -1,9 +1,9 @@
 /* ============================================================
    HVAC PRO — Premium Design System
-   Fonts: Syne (headings), Inter (body), Barlow Condensed (labels)
+   Fonts: Inter (headings), Inter (body), Barlow Condensed (labels)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
 
 :root {
   --brand-orange:     #E85D04;
@@ -28,7 +28,7 @@
   --input-bg:         rgba(255,255,255,0.05);
   --shadow-card:      0 8px 32px rgba(0,0,0,0.45);
   --shadow-glow:      0 0 30px rgba(232,93,4,0.18);
-  --font-head:   'Syne', sans-serif;
+  --font-head:   'Inter', sans-serif;
   --font-body:   'Inter', sans-serif;
   --font-label:  'Barlow Condensed', sans-serif;
   --radius-sm:   6px;
@@ -1052,13 +1052,13 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 /* DISTINCT LAYOUT STYLES */
 
 /* Index: Split Hero */
-.hero-split { display:flex; min-height:80vh; align-items:center; background:var(--bg-primary); position:relative; overflow:hidden; }
+.hero-split { display:flex; min-height:70vh; align-items:center; background:var(--bg-primary); position:relative; overflow:hidden; }
 .hero-split-text { flex:1; padding:10% 5%; z-index:2; }
 .hero-split-image { flex:1; height:100%; position:absolute; right:0; top:0; width:50%; background-size:cover; background-position:center; clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%); }
 .hero-stats-overlap { display:flex; gap:2rem; background:var(--bg-secondary); padding:2rem; border-radius:var(--radius-xl); box-shadow:var(--shadow-card); margin-top:-4rem; position:relative; z-index:3; width:calc(100% - 4rem); max-width:1200px; margin-left:auto; margin-right:auto; }
 
 /* Home 2: Cinematic Hero */
-.hero-cinematic { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; }
+.hero-cinematic { min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; }
 .hero-cinematic-bg { position:absolute; inset:0; background-size:cover; background-position:center; filter:brightness(0.4); }
 .hero-cinematic-content { position:relative; z-index:2; max-width:900px; padding:2rem; }
 .hero-cinematic h1 { font-size:clamp(3rem, 6vw, 5rem); font-family:var(--font-head); font-weight:900; line-height:1; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:-0.05em; color:#fff; }
@@ -1085,7 +1085,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .tier-col.highlight { background:linear-gradient(180deg, var(--bg-card-hover), var(--bg-secondary)); position:relative; z-index:2; box-shadow:0 0 30px rgba(0,0,0,0.5); transform:scale(1.02); }
 
 /* Emergency: High Contrast */
-.emergency-hero { background:#DC2626; color:#fff; min-height:60vh; display:flex; align-items:center; text-align:center; }
+.emergency-hero { background:#DC2626; color:#fff; min-height:70vh; display:flex; align-items:center; text-align:center; }
 .emergency-hero h1 { font-family:var(--font-head); font-size:clamp(4rem, 8vw, 7rem); font-weight:900; line-height:0.9; text-transform:uppercase; }
 .giant-number-block { background:var(--bg-primary); padding:4rem; border-left:12px solid #DC2626; display:flex; align-items:center; gap:2rem; margin-bottom:2rem; }
 .gn-digit { font-size:5rem; font-weight:900; font-family:var(--font-head); color:#DC2626; opacity:0.5; line-height:1; }

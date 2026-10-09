@@ -43,4 +43,3 @@
 .team-card-body { padding: 1.25rem 1rem; }
 .team-card h4 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.25rem; }
 .team-card .role { font-family: var(--font-label); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-orange); }
-

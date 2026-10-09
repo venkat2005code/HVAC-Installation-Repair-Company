@@ -42,20 +42,19 @@
   
     <!-- SIDEBAR -->
   <aside class="sidebar" id="dashSidebar">
-    
     <nav class="sidebar-nav" id="scrollspy-nav">
-      <a href="#overview" class="sidebar-link active">Operations Overview</a>
-      <a href="#customers" class="sidebar-link">Customers</a>
-      <a href="#equipment" class="sidebar-link">Equipment Database</a>
-      <a href="#requests" class="sidebar-link">Service Requests</a>
-      <a href="#scheduling" class="sidebar-link">Technician Scheduling</a>
-      <a href="#contracts" class="sidebar-link">Maintenance Contracts</a>
-      <a href="#warranty" class="sidebar-link">Warranty Management</a>
-      <a href="#reports" class="sidebar-link">Visit Reports</a>
-      <a href="#invoices" class="sidebar-link">Payments & Invoices</a>
-      <a href="#analytics" class="sidebar-link">Analytics</a>
-      <a href="#notifications" class="sidebar-link">Notifications</a>
-      <a href="#settings" class="sidebar-link">System Settings</a>
+      <a href="#" class="sidebar-link active" onclick="showPanel('overview');return false;">Operations Overview</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('customers');return false;">Customers</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('equipment');return false;">Equipment Database</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('requests');return false;">Service Requests</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('scheduling');return false;">Technician Scheduling</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('contracts');return false;">Maintenance Contracts</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('warranty');return false;">Warranty Management</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('reports');return false;">Visit Reports</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('invoices');return false;">Payments & Invoices</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('analytics');return false;">Analytics</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('notifications');return false;">Notifications</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('settings');return false;">System Settings</a>
     </nav>
     
     <a href="login.html" class="sidebar-logout">
@@ -63,11 +62,11 @@
     </a>
   </aside>
 
-  <!-- MAIN LONG-SCROLL CONTENT -->
+  <!-- MAIN PANEL CONTENT -->
   <main class="dash-main">
     
     <!-- 1. OPERATIONS OVERVIEW -->
-    <section id="overview" class="dash-section" style="padding-top: 0">
+    <section id="overview" class="dash-section dash-panel active" style="padding-top: 0">
       <div class="section-header">
         <h2>Operations Overview</h2>
         <p>Real-time HVAC business metrics and daily performance.</p>
@@ -103,7 +102,7 @@
     </section>
 
     <!-- 2. CUSTOMER MANAGEMENT -->
-    <section id="customers" class="dash-section">
+    <section id="customers" class="dash-section dash-panel">
       <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end">
         <div>
           <h2>Customer Directory</h2>
@@ -139,7 +138,7 @@
               <td><div style="font-weight:700;color:var(--text-primary)">Michael Chen</div><div style="font-size:0.8rem;color:var(--text-muted)">mchen82@example.com</div></td>
               <td>88 Oak Lane, Springfield</td>
               <td>1 (Heat Pump)</td>
-              <td><span style="background:rgba(255,255,255,0.1);color:var(--text-secondary);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">None</span></td>
+              <td><span style="background:var(--border);color:var(--text-secondary);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem">None</span></td>
               <td style="color:#ef4444;font-weight:700">$450.00</td>
               <td><button class="btn btn-outline" style="padding:0.25rem 0.75rem;font-size:0.8rem">View</button></td>
             </tr>
@@ -149,7 +148,7 @@
     </section>
 
     <!-- 3. HVAC EQUIPMENT MANAGEMENT -->
-    <section id="equipment" class="dash-section">
+    <section id="equipment" class="dash-section dash-panel">
       <div class="section-header">
         <h2>HVAC Equipment Database</h2>
         <p>Master registry of all installed systems across all properties.</p>
@@ -189,7 +188,7 @@
     </section>
 
     <!-- 4. SERVICE REQUEST KANBAN -->
-    <section id="requests" class="dash-section">
+    <section id="requests" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Service Requests Workflow</h2>
         <p>Manage incoming requests, scheduling, and job execution.</p>
@@ -212,7 +211,7 @@
             </div>
             <div class="kanban-card priority-low">
               <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem">
-                <span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);background:rgba(255,255,255,0.1);padding:0.1rem 0.4rem;border-radius:4px">ROUTINE</span>
+                <span style="font-size:0.75rem;font-weight:700;color:var(--text-primary);background:var(--border);padding:0.1rem 0.4rem;border-radius:4px">ROUTINE</span>
                 <span style="font-size:0.75rem;color:var(--text-muted)">2h ago</span>
               </div>
               <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Fall Tune-Up Request</h4>
@@ -255,7 +254,7 @@
     </section>
 
     <!-- 5. TECHNICIAN SCHEDULING -->
-    <section id="scheduling" class="dash-section">
+    <section id="scheduling" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Technician Scheduling & Dispatch</h2>
         <p>Monitor field staff locations, route efficiency, and daily workload.</p>
@@ -314,7 +313,7 @@
     </section>
 
     <!-- 6. MAINTENANCE CONTRACTS -->
-    <section id="contracts" class="dash-section">
+    <section id="contracts" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Maintenance Contracts</h2>
         <p>Monitor active agreements, track seasonal visit fulfillment, and manage renewals.</p>
@@ -342,7 +341,7 @@
 
 
     <!-- 7. WARRANTY MANAGEMENT -->
-    <section id="warranty" class="dash-section">
+    <section id="warranty" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Warranty Management</h2>
         <p>Track equipment warranties, file claims, and monitor expiration dates.</p>
@@ -382,7 +381,7 @@
     </section>
 
     <!-- 8. VISIT REPORTS -->
-    <section id="reports" class="dash-section">
+    <section id="reports" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Service & Technician Reports</h2>
         <p>Review completed service tickets, parts used, and tech notes before invoicing.</p>
@@ -391,7 +390,7 @@
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <div>
             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-              <span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);background:rgba(255,255,255,0.1);padding:0.1rem 0.4rem;border-radius:4px">COMPLETED</span>
+              <span style="font-size:0.75rem;font-weight:700;color:var(--text-primary);background:var(--border);padding:0.1rem 0.4rem;border-radius:4px">COMPLETED</span>
               <span style="font-size:0.8rem;color:var(--text-secondary)">Job #8819 • Today, 10:45 AM</span>
             </div>
             <h3 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Condenser Fan Replacement</h3>
@@ -407,7 +406,7 @@
     </section>
 
     <!-- 9. INVOICES -->
-    <section id="invoices" class="dash-section">
+    <section id="invoices" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Invoices & Payments</h2>
         <p>Manage accounts receivable, generate billing, and track payments.</p>
@@ -457,7 +456,7 @@
     </section>
 
     <!-- 10. ANALYTICS -->
-    <section id="analytics" class="dash-section">
+    <section id="analytics" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Reports & Analytics</h2>
         <p>Deep insights into service volume, tech performance, and revenue trends.</p>
@@ -475,7 +474,7 @@
     </section>
 
     <!-- 11. NOTIFICATIONS -->
-    <section id="notifications" class="dash-section">
+    <section id="notifications" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Notifications & Communication</h2>
         <p>Dispatch alerts, SMS reminders, and bulk email campaigns.</p>
@@ -507,7 +506,7 @@
     </section>
 
     <!-- 12. SETTINGS -->
-    <section id="settings" class="dash-section" style="margin-bottom: 2rem; border-bottom: none">
+    <section id="settings" class="dash-section dash-panel" style="margin-bottom: 2rem; border-bottom: none">
       <div class="section-header">
         <h2>Staff & System Settings</h2>
         <p>Manage system preferences, pricing tiers, and technician permissions.</p>
@@ -543,25 +542,29 @@
 <script>
   lucide.createIcons();
 
-  // ScrollSpy Logic
-  const sections = document.querySelectorAll('.dash-section');
-  const navLinks = document.querySelectorAll('.sidebar-link');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - 250)) {
-        current = section.getAttribute('id');
+  // Panel Switcher — no page scroll
+  function showPanel(panelId) {
+    document.querySelectorAll('.dash-panel').forEach(p => {
+      p.style.display = 'none';
+    });
+    document.querySelectorAll('.sidebar-link').forEach(l => {
+      l.classList.remove('active');
+    });
+    const panel = document.getElementById(panelId);
+    if (panel) {
+      panel.style.display = 'block';
+      document.querySelector('.dash-main').scrollTop = 0;
+    }
+    document.querySelectorAll('.sidebar-link').forEach(l => {
+      if (l.getAttribute('onclick') && l.getAttribute('onclick').includes("'" + panelId + "'")) {
+        l.classList.add('active');
       }
     });
+  }
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) {
-        link.classList.add('active');
-      }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.dash-panel').forEach((p, i) => {
+      p.style.display = i === 0 ? 'block' : 'none';
     });
   });
 

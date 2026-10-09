@@ -43,16 +43,16 @@
   <aside class="sidebar" id="dashSidebar">
     
     <nav class="sidebar-nav" id="scrollspy-nav">
-      <a href="#overview" class="sidebar-link active">Dashboard Overview</a>
-      <a href="#systems" class="sidebar-link">My HVAC Systems</a>
-      <a href="#schedule" class="sidebar-link">Book a Service</a>
-      <a href="#upcoming" class="sidebar-link">Upcoming Appointments</a>
-      <a href="#contract" class="sidebar-link">Maintenance Plans</a>
-      <a href="#history" class="sidebar-link">Service History</a>
-      <a href="#warranty" class="sidebar-link">Warranty Documents</a>
-      <a href="#invoices" class="sidebar-link">Payments & Invoices</a>
-      <a href="#notifications" class="sidebar-link">Notifications</a>
-      <a href="#settings" class="sidebar-link">Profile Settings</a>
+      <a href="#" class="sidebar-link active" onclick="showPanel('overview');return false;">Dashboard Overview</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('systems');return false;">My HVAC Systems</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('schedule');return false;">Book a Service</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('upcoming');return false;">Upcoming Appointments</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('contract');return false;">Maintenance Plans</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('history');return false;">Service History</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('warranty');return false;">Warranty Documents</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('invoices');return false;">Payments & Invoices</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('notifications');return false;">Notifications</a>
+      <a href="#" class="sidebar-link" onclick="showPanel('settings');return false;">Profile Settings</a>
     </nav>
     
     <a href="login.html" class="sidebar-logout">
@@ -60,11 +60,11 @@
     </a>
   </aside>
 
-  <!-- MAIN LONG-SCROLL CONTENT -->
+  <!-- MAIN PANEL CONTENT -->
   <main class="dash-main">
     
     <!-- 1. OVERVIEW -->
-    <section id="overview" class="dash-section" style="padding-top: 0">
+    <section id="overview" class="dash-section dash-panel active" style="padding-top: 0">
       <div class="section-header">
         <h2>Welcome back, Sarah.</h2>
         <p>Here is a quick glance at your HVAC systems and service status.</p>
@@ -93,7 +93,7 @@
     </section>
 
     <!-- 2. MY HVAC SYSTEMS -->
-    <section id="systems" class="dash-section">
+    <section id="systems" class="dash-section dash-panel">
       <div class="section-header">
         <h2>My HVAC Systems</h2>
         <p>Manage your registered equipment and check health status.</p>
@@ -125,7 +125,7 @@
     </section>
 
     <!-- 3. SCHEDULE SERVICE WIZARD -->
-    <section id="schedule" class="dash-section">
+    <section id="schedule" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Schedule a Service Visit</h2>
         <p>Book a maintenance tune-up or request emergency repairs.</p>
@@ -172,7 +172,7 @@
     </section>
 
     <!-- 4. UPCOMING VISITS -->
-    <section id="upcoming" class="dash-section">
+    <section id="upcoming" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Upcoming Service Visit</h2>
         <p>Your next scheduled appointment.</p>
@@ -202,7 +202,7 @@
     </section>
 
     <!-- 5. MAINTENANCE CONTRACT -->
-    <section id="contract" class="dash-section">
+    <section id="contract" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Maintenance Contract</h2>
         <p>Track your Premium Comfort plan benefits.</p>
@@ -230,7 +230,7 @@
 
 
     <!-- 6. VISIT HISTORY -->
-    <section id="history" class="dash-section">
+    <section id="history" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Technician Visit History</h2>
         <p>Review past service appointments, diagnostics, and parts replaced.</p>
@@ -273,7 +273,7 @@
     </section>
 
     <!-- 7. WARRANTY & DOCUMENTS -->
-    <section id="warranty" class="dash-section">
+    <section id="warranty" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Warranty & System Documents</h2>
         <p>Access your equipment warranties, installation certificates, and manuals.</p>
@@ -285,7 +285,7 @@
             <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Carrier AC Warranty</h4>
             <p style="margin:0;color:var(--text-secondary);font-size:0.85rem">Expires: Aug 2032 (Parts)</p>
           </div>
-          <button class="btn btn-outline" style="width:100%;font-size:0.8rem;padding:0.5rem">Download PDF</button>
+          <button class="btn btn-outline" style="width:100%;font-size:0.8rem;padding:0.5rem;justify-content:center;text-align:center">Download PDF</button>
         </div>
         <div class="hvac-card" style="align-items:center;text-align:center;gap:1rem">
           <div style="width:48px;height:48px;border-radius:12px;background:rgba(232,93,4,0.1);color:var(--brand-orange);display:flex;align-items:center;justify-content:center"><i data-lucide="shield-check"></i></div>
@@ -293,7 +293,7 @@
             <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Trane Furnace Warranty</h4>
             <p style="margin:0;color:var(--text-secondary);font-size:0.85rem">Expires: Nov 2028 (Parts)</p>
           </div>
-          <button class="btn btn-outline" style="width:100%;font-size:0.8rem;padding:0.5rem">Download PDF</button>
+          <button class="btn btn-outline" style="width:100%;font-size:0.8rem;padding:0.5rem;justify-content:center;text-align:center">Download PDF</button>
         </div>
         <div class="hvac-card" style="align-items:center;text-align:center;gap:1rem">
           <div style="width:48px;height:48px;border-radius:12px;background:rgba(232,93,4,0.1);color:var(--brand-orange);display:flex;align-items:center;justify-content:center"><i data-lucide="file-text"></i></div>
@@ -301,13 +301,13 @@
             <h4 style="margin:0 0 0.25rem 0;color:var(--text-primary)">Installation Certificate</h4>
             <p style="margin:0;color:var(--text-secondary);font-size:0.85rem">Property Permitting Docs</p>
           </div>
-          <button class="btn btn-outline" style="width:100%;font-size:0.8rem;padding:0.5rem">Download PDF</button>
+          <button class="btn btn-outline" style="width:100%;font-size:0.8rem;padding:0.5rem;justify-content:center;text-align:center">Download PDF</button>
         </div>
       </div>
     </section>
 
     <!-- 8. INVOICES -->
-    <section id="invoices" class="dash-section">
+    <section id="invoices" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Invoices & Payments</h2>
         <p>Review billing history and pay outstanding balances.</p>
@@ -347,7 +347,7 @@
     </section>
 
     <!-- 9. NOTIFICATIONS -->
-    <section id="notifications" class="dash-section">
+    <section id="notifications" class="dash-section dash-panel">
       <div class="section-header">
         <h2>Service Notifications</h2>
         <p>Important alerts regarding your equipment and service schedule.</p>
@@ -371,7 +371,7 @@
     </section>
 
     <!-- 10. PROFILE & SETTINGS -->
-    <section id="settings" class="dash-section" style="margin-bottom: 2rem; border-bottom: none">
+    <section id="settings" class="dash-section dash-panel" style="margin-bottom: 2rem; border-bottom: none">
       <div class="section-header">
         <h2>Profile & Settings</h2>
         <p>Update your contact information and communication preferences.</p>
@@ -426,30 +426,39 @@
 <script>
   lucide.createIcons();
 
-  // ScrollSpy Logic
-  const sections = document.querySelectorAll('.dash-section');
-  const navLinks = document.querySelectorAll('.sidebar-link');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - 150)) {
-        current = section.getAttribute('id');
+  // Panel Switcher — no page scroll
+  function showPanel(panelId) {
+    // Hide all panels
+    document.querySelectorAll('.dash-panel').forEach(p => {
+      p.style.display = 'none';
+    });
+    // Deactivate all sidebar links
+    document.querySelectorAll('.sidebar-link').forEach(l => {
+      l.classList.remove('active');
+    });
+    // Show target panel
+    const panel = document.getElementById(panelId);
+    if (panel) {
+      panel.style.display = 'block';
+      // Scroll the main area (not the page) to top
+      document.querySelector('.dash-main').scrollTop = 0;
+    }
+    // Activate matching sidebar link
+    document.querySelectorAll('.sidebar-link').forEach(l => {
+      if (l.getAttribute('onclick') && l.getAttribute('onclick').includes("'" + panelId + "'")) {
+        l.classList.add('active');
       }
     });
+  }
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) {
-        link.classList.add('active');
-      }
+  // Init: show only the first panel
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.dash-panel').forEach((p, i) => {
+      p.style.display = i === 0 ? 'block' : 'none';
     });
   });
 
-
-  // Direction Toggle Logic
+  // Direction Toggle
   function toggleDir() {
     const htmlElement = document.documentElement;
     const dirBtn = document.getElementById('dirToggle');
@@ -462,7 +471,7 @@
     }
   }
 
-// Theme Toggle Logic
+  // Theme Toggle
   function toggleTheme() {
     const htmlElement = document.documentElement;
     const themeIcon = document.getElementById('themeIcon');

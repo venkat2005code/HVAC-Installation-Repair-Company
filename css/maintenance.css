@@ -24,4 +24,3 @@
   font-size: 0.65rem; color: #22c55e; flex-shrink: 0;
 }
 .feature-check .chk.no { background: rgba(100,116,139,0.12); border-color: rgba(100,116,139,0.2); color: var(--text-muted); }
-
