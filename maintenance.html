@@ -125,19 +125,78 @@
 <main class="main-content">
 
   
-  <section class="hero-cinematic">
-    <div class="hero-cinematic-bg" style="background-image:url(img_hero_maintenance.png); filter:brightness(0.4)"></div>
-    <div class="hero-cinematic-content">
-      <div class="section-label" style="background:rgba(232,93,4,0.2);padding:0.5rem 1rem;border-radius:20px;color:var(--brand-orange);margin-bottom:1rem">Maintenance</div>
-      <h1 style="color:#fff;margin-bottom:0">Protect Your Asset</h1>
+  <section class="hero-cinematic" style="min-height:78vh;padding:5rem 1rem">
+    <div class="hero-cinematic-bg" style="background-image:url(img_hero_maintenance.png); filter:brightness(0.35)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,18,30,0.65) 0%, rgba(10,18,30,0.9) 100%);"></div>
+    <div class="hero-cinematic-content" style="max-width:960px">
+      <div class="section-label" style="background:rgba(232,93,4,0.22);border:1px solid rgba(232,93,4,0.4);padding:0.45rem 1.25rem;border-radius:24px;color:var(--brand-orange);margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:0.5rem;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase">
+        <i data-lucide="shield-check" style="width:16px;height:16px"></i> Preventative HVAC Maintenance
+      </div>
+      <h1 style="color:#fff;margin-bottom:1.25rem;font-size:clamp(2.5rem, 5.5vw, 4.25rem);font-family:var(--font-head);font-weight:900;line-height:1.08;text-transform:uppercase;letter-spacing:-0.03em">
+        Protect Your Asset.<br><span style="color:var(--brand-orange)">Extend System Life.</span>
+      </h1>
+      <p style="font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.75;color:rgba(255,255,255,0.88);max-width:740px;margin:0 auto 2rem">
+        Proactive maintenance plans engineered to maximize equipment longevity, cut energy costs by up to 30%, and prevent 95% of unexpected breakdowns before extreme weather hits.
+      </p>
+      <div style="display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.75rem">
+        <a href="#pricing-table" class="btn btn-primary" style="font-size:1.05rem;padding:0.9rem 2.2rem;font-weight:700;box-shadow:0 10px 25px rgba(232,93,4,0.35)">
+          <i data-lucide="calendar"></i> Explore Maintenance Plans
+        </a>
+        <a href="#technical-audit" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.45);font-size:1.05rem;padding:0.9rem 2rem;font-weight:600;backdrop-filter:blur(6px)">
+          <i data-lucide="clipboard-check"></i> View 21-Point Audit
+        </a>
+      </div>
+
+      <!-- Feature Badges -->
+      <div class="hero-badges-grid">
+        <div class="hero-badge-card">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(232,93,4,0.2);color:var(--brand-orange);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <i data-lucide="check-circle-2" style="width:20px;height:20px"></i>
+          </div>
+          <div>
+            <div style="color:#fff;font-weight:700;font-size:0.95rem;line-height:1.2">21-Point Audit</div>
+            <div style="color:rgba(255,255,255,0.7);font-size:0.78rem">Factory diagnostic checklist</div>
+          </div>
+        </div>
+
+        <div class="hero-badge-card">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(34,197,94,0.2);color:#22c55e;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <i data-lucide="zap" style="width:20px;height:20px"></i>
+          </div>
+          <div>
+            <div style="color:#fff;font-weight:700;font-size:0.95rem;line-height:1.2">Up to 30% Savings</div>
+            <div style="color:rgba(255,255,255,0.7);font-size:0.78rem">Peak electrical efficiency</div>
+          </div>
+        </div>
+
+        <div class="hero-badge-card">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(59,130,246,0.2);color:#60a5fa;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <i data-lucide="clock" style="width:20px;height:20px"></i>
+          </div>
+          <div>
+            <div style="color:#fff;font-weight:700;font-size:0.95rem;line-height:1.2">Priority Dispatch</div>
+            <div style="color:rgba(255,255,255,0.7);font-size:0.78rem">VIP scheduling & zero wait</div>
+          </div>
+        </div>
+
+        <div class="hero-badge-card">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(234,179,8,0.2);color:#facc15;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <i data-lucide="shield" style="width:20px;height:20px"></i>
+          </div>
+          <div>
+            <div style="color:#fff;font-weight:700;font-size:0.95rem;line-height:1.2">Warranty Validated</div>
+            <div style="color:rgba(255,255,255,0.7);font-size:0.78rem">Meets manufacturer specs</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-</section>
 
-  <section class="section" style="background:var(--bg-primary)">
+  <section class="section" id="pricing-table" style="background:var(--bg-primary)">
     <div class="container">
       <div class="pricing-tier-table">
         <div class="tier-col">
+          <div class="tier-badge-slot"></div>
           <h3 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:1rem">Basic</h3>
           <div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:2rem">$89<span style="font-size:1rem;color:var(--text-muted)">/yr</span></div>
           <ul style="list-style:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
@@ -147,7 +206,9 @@
           <a href="#" class="btn btn-outline" style="width:100%;justify-content:center">Select</a>
         </div>
         <div class="tier-col highlight">
-          <div style="background:var(--brand-orange);color:#fff;padding:0.25rem;font-size:0.75rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.1em;border-radius:4px;margin-bottom:1rem;display:inline-block">Most Popular</div>
+          <div class="tier-badge-slot">
+            <div style="background:var(--brand-orange);color:#fff;padding:0.25rem 0.85rem;font-size:0.75rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.1em;border-radius:20px;display:inline-block">Most Popular</div>
+          </div>
           <h3 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:1rem">Standard</h3>
           <div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:2rem">$149<span style="font-size:1rem;color:var(--text-muted)">/yr</span></div>
           <ul style="list-style:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
@@ -158,6 +219,7 @@
           <a href="#" class="btn btn-primary" style="width:100%;justify-content:center">Select</a>
         </div>
         <div class="tier-col">
+          <div class="tier-badge-slot"></div>
           <h3 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:1rem">Premium</h3>
           <div style="font-size:3rem;font-weight:900;color:var(--brand-orange);margin-bottom:2rem">$299<span style="font-size:1rem;color:var(--text-muted)">/yr</span></div>
           <ul style="list-style:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
@@ -171,7 +233,7 @@
     </div>
   </section>
 
-  <section class="section" style="background:var(--bg-secondary)">
+  <section class="section" id="technical-audit" style="background:var(--bg-secondary)">
     <div class="container">
       <h2 class="section-title" style="text-align:center;margin-bottom:3rem">The 21-Point Technical Audit</h2>
       <div style="columns:2;column-gap:4rem;max-width:800px;margin:0 auto;color:var(--text-secondary);font-size:1.05rem;line-height:2">
@@ -188,14 +250,14 @@
   
   <section class="section" style="background:var(--bg-secondary)">
     <div class="container">
-      <div style="display:flex;gap:4rem;align-items:center;background:var(--bg-primary);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border)">
-        <div style="flex:1;padding:4rem">
+      <div class="split-banner-card" style="display:flex;gap:4rem;align-items:center;background:var(--bg-primary);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border)">
+        <div class="split-banner-text" style="flex:1;padding:4rem">
           <div class="section-label">Business Solutions</div>
           <h2 class="section-title">Commercial Maintenance</h2>
           <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:2rem">We offer customized quarterly and bi-annual maintenance contracts for commercial Rooftop Units (RTUs), chillers, and server room cooling systems.</p>
           <a href="contact.html" class="btn btn-outline">Request Commercial Bid</a>
         </div>
-        <div style="flex:1;height:100%;min-height:400px;background-image:url(img_maintenance_commercial.png);background-size:cover;background-position:center;opacity:0.8"></div>
+        <div class="split-banner-img" style="flex:1;height:100%;min-height:400px;background-image:url(img_maintenance_commercial.png);background-size:cover;background-position:center;opacity:0.8"></div>
       </div>
     </div>
   </section>
@@ -238,9 +300,9 @@
 
   <section class="section" style="background:var(--bg-primary);border-top:1px solid var(--border)">
     <div class="container">
-      <div style="display:flex;flex-wrap:wrap;background:var(--bg-secondary);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border)">
-        <div style="flex:1;min-width:300px;background:url('img_maintenance_proactive.png') center/cover no-repeat;min-height:400px"></div>
-        <div style="flex:1;min-width:300px;padding:4rem;display:flex;flex-direction:column;justify-content:center">
+      <div class="split-banner-card" style="display:flex;flex-wrap:wrap;background:var(--bg-secondary);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border)">
+        <div class="split-banner-img" style="flex:1;min-width:300px;background:url('img_maintenance_proactive.png') center/cover no-repeat;min-height:400px"></div>
+        <div class="split-banner-text" style="flex:1;min-width:300px;padding:4rem;display:flex;flex-direction:column;justify-content:center">
           <h2 class="section-title" style="margin-bottom:1rem">Save Thousands on Premature Replacements</h2>
           <p style="color:var(--text-secondary);font-size:1.1rem;line-height:1.7;margin-bottom:2rem">Proactive maintenance doesn't just prevent unexpected breakdowns—it drastically extends the lifespan of your unit and lowers your monthly utility bills. Protect your investment today.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap">

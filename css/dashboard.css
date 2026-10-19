@@ -1,28 +1,30 @@
 /* DASHBOARD SINGLE PAGE LAYOUT */
 body {
-  padding-top: 72px; /* Fix for fixed header */
-  overflow: hidden; /* Prevent full page scroll */
+  padding-top: 0;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 .dash-container {
   display: flex;
-  height: calc(100vh - 72px); /* Fixed height */
+  height: 100vh;
+  width: 100vw;
   position: relative;
   overflow: hidden;
 }
-
 
 /* SIDEBAR */
 .sidebar {
   width: 260px;
   background: var(--bg-secondary);
   border-right: 1px solid var(--border);
-  height: 100%;
-  overflow-y: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -30,11 +32,72 @@ html {
   z-index: 50;
 }
 
+.sidebar-header {
+  height: 72px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--bg-secondary);
+}
+
 .sidebar-nav {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+/* CONTENT WRAPPER */
+.dash-content-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  min-width: 0;
+  background: var(--bg-primary);
+}
+
+/* DASH TOP HEADER */
+.dash-top-header {
+  height: 72px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px) saturate(1.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  flex-shrink: 0;
+  z-index: 40;
+}
+
+.dash-top-header .header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dash-nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dash-nav-toggle:hover {
+  background: rgba(0,0,0,0.05);
 }
 
 .sidebar-link {
@@ -313,10 +376,11 @@ html {
     box-shadow: 10px 0 30px rgba(0,0,0,0.5);
   }
   .sidebar.open { transform: translateX(0); }
-  .mobile-sidebar-toggle { display: flex; }
+  .dash-nav-toggle { display: inline-flex; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .dash-main { padding: 1.5rem 1rem; }
+  .dash-top-header { padding: 0 1rem; }
 }
 
 @media (max-width: 480px) {

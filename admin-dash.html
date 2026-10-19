@@ -11,37 +11,22 @@
 </head>
 <body>
 
-<!-- SITE HEADER -->
-<header class="site-header" id="siteHeader">
-  <div class="header-inner" style="max-width: 100%">
-    <a href="index.html" class="logo" style="text-decoration:none">
-      <img src="img_logo.jpg" alt="AirPro Logo"/>
-      <div class="logo-text">
-        <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
-        <span class="logo-tagline" style="color:var(--brand-orange)">ERP SYSTEM</span>
-      </div>
-    </a>
-
-    <div class="header-right" style="display:flex;align-items:center;gap:0.75rem">
-      <button class="header-btn" id="dirToggle" onclick="toggleDir()">LTR</button>
-      <button class="header-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle Theme">
-        <span id="themeIcon"><i data-lucide="moon"></i></span>
-      </button>
-      <div class="header-divider"></div>
-      <svg class="header-avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="20" r="20" fill="#FFF3ED"/>
-  <circle cx="20" cy="15" r="6" fill="#E85D04"/>
-  <path d="M10 32C10 27.5817 14.4772 24 20 24C25.5228 24 30 27.5817 30 32" stroke="#E85D04" stroke-width="3" stroke-linecap="round"/>
-  <path d="M28 12L31 9M31 12L28 9" stroke="#E85D04" stroke-width="2" stroke-linecap="round"/>
-</svg>
-    </div>
-  </div>
-</header>
 <!-- DASHBOARD CONTAINER -->
 <div class="dash-container">
   
-    <!-- SIDEBAR -->
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="dashSidebar">
+    <!-- Sidebar Header & Logo -->
+    <div class="sidebar-header">
+      <a href="index.html" class="logo" style="text-decoration:none">
+        <img src="img_logo.jpg" alt="AirPro Logo"/>
+        <div class="logo-text">
+          <span class="logo-name">Air<span style="color: var(--brand-orange)">Pro</span></span>
+          <span class="logo-tagline" style="color:var(--brand-orange)">ERP SYSTEM</span>
+        </div>
+      </a>
+    </div>
+
     <nav class="sidebar-nav" id="scrollspy-nav">
       <a href="#" class="sidebar-link active" onclick="showPanel('overview');return false;">Operations Overview</a>
       <a href="#" class="sidebar-link" onclick="showPanel('customers');return false;">Customers</a>
@@ -62,8 +47,31 @@
     </a>
   </aside>
 
-  <!-- MAIN PANEL CONTENT -->
-  <main class="dash-main">
+  <!-- CONTENT WRAPPER -->
+  <div class="dash-content-wrap">
+    <!-- TOP HEADER: Mobile toggle & Right-aligned Profile, Theme, and LTR icons -->
+    <header class="dash-top-header" id="siteHeader">
+      <button class="dash-nav-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="header-right">
+        <button class="header-btn" id="dirToggle" onclick="toggleDir()">LTR</button>
+        <button class="header-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle Theme">
+          <span id="themeIcon"><i data-lucide="moon"></i></span>
+        </button>
+        <div class="header-divider"></div>
+        <svg class="header-avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" fill="#FFF3ED"/>
+          <circle cx="20" cy="15" r="6" fill="#E85D04"/>
+          <path d="M10 32C10 27.5817 14.4772 24 20 24C25.5228 24 30 27.5817 30 32" stroke="#E85D04" stroke-width="3" stroke-linecap="round"/>
+          <path d="M28 12L31 9M31 12L28 9" stroke="#E85D04" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </header>
+
+    <!-- MAIN PANEL CONTENT -->
+    <main class="dash-main">
     
     <!-- 1. OPERATIONS OVERVIEW -->
     <section id="overview" class="dash-section dash-panel active" style="padding-top: 0">
@@ -534,9 +542,8 @@
     </section>
 
   </main>
+  </div>
 </div>
-
-<button class="mobile-sidebar-toggle" onclick="toggleSidebar()"><i data-lucide="menu"></i></button>
 
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
